@@ -1,0 +1,25 @@
+# Raw data
+raw/
+data/
+external_data/
+
+# Large outputs
+figures/
+plots/
+results/
+output/
+tmp/
+
+# Binary office files
+*.docx
+*.xlsx
+*.pptx
+
+# Archives
+*.zip
+*.7z
+*.rar
+
+# OS / editor
+.DS_Store
+Thumbs.db
