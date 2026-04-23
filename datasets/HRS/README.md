@@ -34,6 +34,75 @@ Main variables extracted across waves:
 - height
 - weight
 
+## Downloaded Files Used Locally
+
+### RAND HRS Fat Files
+
+Downloaded and extracted local files included:
+
+- `fat2012/h12f3a_SAS.zip`
+- `fat2012/h12f3a.sas7bdat`
+- `fat2012/h12f3a.cont`
+- `fat2012/hrs12.fmt`
+- `fat2014/h14f2b_SAS.zip`
+- `fat2014/h14f2b.sas7bdat`
+- `fat2014/h14f2b.cont`
+- `fat2014/hrs14.fmt`
+- `fat2016/h16f2c_SAS.zip`
+- `fat2016/h16f2c.sas7bdat`
+- `fat2016/h16f2c.cont`
+- `fat2016/hrs16.fmt`
+- `fat2018/h18f2c_SAS.zip`
+- `fat2018/h18f2c.sas7bdat`
+- `fat2018/h18f2c.cont`
+- `fat2018/hrs18.fmt`
+- `fat2020/h20f1b_SAS.zip`
+- `fat2020/h20f1b.sas7bdat`
+- `fat2020/h20f1b.cont`
+- `fat2020/hrs20.fmt`
+- `fat2022/h22e3a_SAS.zip`
+- `fat2022/h22e3a.sas7bdat`
+- `fat2022/h22e3a.cont`
+- `fat2022/hrs22.fmt`
+
+### Additional HRS files downloaded locally
+
+- `longitudinal/randhrs1992_2022v1_SAS.zip`
+- `longitudinal/randhrs1992_2022v1.sas7bdat`
+- `exitfinder/randhrsexitfinder1994_2022v1_SAS.zip`
+- `exitfinder/randhrsexitfinder1994_2022v1.sas7bdat`
+
+Format:
+
+- downloaded SAS archives
+- extracted `sas7bdat`, `.cont`, `.fmt`, and PDF readme files
+- local processed outputs written as `.rds` and `.csv.gz`
+
+Representative local file date:
+
+- checked in local workspace on `2026-04-20`
+
+## Local Version Notes
+
+The HRS wave-specific fat files used in the pooled workflow were:
+
+- `2012: h12f3a`
+- `2014: h14f2b`
+- `2016: h16f2c`
+- `2018: h18f2c`
+- `2020: h20f1b`
+- `2022: h22e3a`
+
+Additional downloaded HRS products included:
+
+- `RAND HRS Longitudinal File 2022 (v1)`
+- `RAND HRS Exit/Post-Exit Interview and Finder Files 2022 (v1)`
+
+The locally generated pooled files were:
+
+- `HRS_fat_2012_2022_event_bundle.rds`
+- `HRS_fat_2012_2022_event_bundle.csv.gz`
+
 ## Preprocessing
 
 The fat files were harmonized across waves by mapping wave-specific prefixes to common variable names. Binary variables were recoded using a simple working convention:

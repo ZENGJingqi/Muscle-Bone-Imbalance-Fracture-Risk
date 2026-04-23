@@ -1,18 +1,49 @@
 # Muscle-Bone-Imbalance-Fracture-Risk
 
-This repository documents the external data processing and analysis workflow used to support a muscle-bone imbalance phenotype associated with fracture-related and osteoporosis-related burden outside the original Chinese cohort.
+This repository accompanies a manuscript on a muscle-bone imbalance phenotype associated with fracture-related and osteoporosis-related burden. It documents the study context, dataset availability, downloaded external files, and lightweight public preprocessing/analysis workflows that can help readers reproduce the extension analyses.
 
-The current repository focuses on three external datasets:
+## Graphical Abstract
 
-- `NHANES`
-- `KNHANES`
-- `HRS`
+![Graphical abstract](assets/graphical_abstract.svg)
 
-The goal is not to claim universal transferability of the original Chinese cutoff. Instead, these external analyses were used to address three distinct questions:
+## Study Scope
+
+The manuscript combines:
+
+- one original Chinese discovery dataset,
+- three external datasets used for extension and validation:
+  - `NHANES`
+  - `KNHANES`
+  - `HRS`
+
+The goal is not to claim universal transferability of the original Chinese cutoff. Instead, the combined analyses were used to address three distinct questions:
 
 1. Can BIA-derived body composition be bridged to DXA-derived body composition?
 2. Does a DXA-derived muscle-to-bone ratio show structural and risk consistency in external populations?
 3. Do older-adult clinical outcomes show a compatible age- and sex-related context?
+
+## Chinese Discovery Dataset
+
+The original Chinese dataset is not redistributed in this repository.
+
+### Availability of Data and Material
+
+The **"Human Body Composition Dataset for the Chinese Population"** can be accessed through the National Population Health Data Center:
+
+- main portal: <https://www.ncmi.cn/>
+- direct dataset page: <https://www.ncmi.cn//phda/dataDetails.do?id=CSTR:A0006.11.A0005.201905.000346>
+
+License:
+
+- `Creative Commons - Attribution 4.0 International`
+
+This repository instead focuses on the external datasets and the associated reproducible workflow.
+
+## External Datasets
+
+- `NHANES`
+- `KNHANES`
+- `HRS`
 
 ## Repository Structure
 
@@ -20,11 +51,15 @@ The goal is not to claim universal transferability of the original Chinese cutof
 Muscle-Bone-Imbalance-Fracture-Risk/
   README.md
   .gitignore
+  assets/
+    graphical_abstract.svg
   code/
     NHANES/
     KNHANES/
     HRS/
   datasets/
+    Chinese-Human-Body-Composition/
+      README.md
     NHANES/
       README.md
     KNHANES/
@@ -45,36 +80,39 @@ The current evidence supports the biological, structural, and clinical relevance
 
 ## Data Availability
 
-This repository does **not** include raw data files, cleaned participant-level datasets, or large figure outputs.
+This repository does **not** include the original Chinese participant-level data, external raw data files, cleaned participant-level datasets, or large local result bundles.
 
 Reasons:
 
 - Some datasets require registration or application.
 - Large files are not appropriate for a lightweight GitHub methods repository.
-- The purpose here is to document preprocessing logic, analysis design, and key findings.
+- The purpose here is to document dataset access, preprocessing logic, analysis design, and key findings.
 
-## Local Analysis Scripts
+## What This Repository Provides
 
-The analyses described here were implemented locally using the following scripts:
+- dataset-specific notes for the Chinese cohort and the three external datasets,
+- downloaded file names, formats, and locally checked version notes for the external datasets,
+- lightweight public code for NHANES, KNHANES, and HRS,
+- a template for adding future datasets such as `CHARLS` or `SHARE`.
 
-- `scripts/run_nhanes_external_analysis.R`
-- `scripts/run_knhanes_external_analysis.R`
-- `scripts/prepare_hrs_fat_2012_2022.R`
-- `scripts/run_hrs_fat_event_analysis.R`
+## Public Analysis Code
+
+The public code in this repository is limited to the external datasets:
+
+- `code/NHANES`
+- `code/KNHANES`
+- `code/HRS`
+
+No public participant-level code or data release is provided here for the original Chinese discovery cohort.
 
 ## Planned Expansion
 
 The current repository includes documentation for:
 
+- `Chinese Human Body Composition Dataset`
 - `NHANES`
 - `KNHANES`
 - `HRS`
-
-It also includes a lightweight public code folder:
-
-- `code/NHANES`
-- `code/KNHANES`
-- `code/HRS`
 
 Additional datasets can be added later using:
 

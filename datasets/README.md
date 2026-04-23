@@ -4,6 +4,7 @@ Each dataset has its own folder so that preprocessing notes, analysis strategy, 
 
 Current datasets:
 
+- `Chinese-Human-Body-Composition`
 - `NHANES`
 - `KNHANES`
 - `HRS`

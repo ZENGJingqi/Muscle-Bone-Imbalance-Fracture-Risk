@@ -27,6 +27,7 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 - Processed participant-level data are not included in the repository.
 - The scripts are provided to document preprocessing logic, analysis structure, and output generation.
 - Users should adapt file naming and access requirements according to their own approved dataset downloads.
+- No public participant-level code or data release is provided here for the original Chinese discovery cohort.
 
 ## Script Summary
 

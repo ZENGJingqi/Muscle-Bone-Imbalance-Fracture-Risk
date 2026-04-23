@@ -38,6 +38,70 @@ Main variables:
 - sex
 - body weight
 
+## Downloaded Files Used Locally
+
+### Bridge workflow
+
+Local raw files used:
+
+- `NHANES_1999_2000/DEMO.XPT`
+- `NHANES_1999_2000/BMX.XPT`
+- `NHANES_1999_2000/BIX.XPT`
+- `NHANES_1999_2000/DXX.XPT`
+- `NHANES_2001_2002/DEMO_B.XPT`
+- `NHANES_2001_2002/BMX_B.XPT`
+- `NHANES_2001_2002/BIX_B.XPT`
+- `NHANES_2001_2002/DXX_B.XPT`
+- `NHANES_2003_2004/DEMO_C.XPT`
+- `NHANES_2003_2004/BMX_C.XPT`
+- `NHANES_2003_2004/BIX_C.XPT`
+- `NHANES_2003_2004/DXX_C.XPT`
+
+Format:
+
+- `XPT` source files
+- local processed outputs written as `.csv.gz`
+
+Representative local file date:
+
+- checked in local workspace on `2026-04-20`
+
+### Risk-consistency workflow
+
+Local raw files used:
+
+- `NHANES_2013_2014/DEMO_H.XPT`
+- `NHANES_2013_2014/BMX_H.XPT`
+- `NHANES_2013_2014/DXX_H.XPT`
+- `NHANES_2013_2014/DXXFEM_H.XPT`
+- `NHANES_2013_2014/DXXSPN_H.XPT`
+- `NHANES_2013_2014/DXXVFA_H.XPT`
+- `NHANES_2013_2014/DXXFRX_H.XPT`
+- `NHANES_2013_2014/OSQ_H.XPT`
+
+Additional local documentation files used for checking:
+
+- `2013_Body_Composition_DXA_Manual.pdf`
+- variable documentation pages stored as local `.htm`/`.pdf`
+
+Format:
+
+- `XPT` source files
+- local processed outputs written as `.csv.gz`
+
+Representative local file date:
+
+- checked in local workspace on `2026-04-20`
+
+## Local Version Notes
+
+This repository does not assign a custom version number to NHANES. The local workflow is tied to the survey cycle and downloaded file names listed above.
+
+The following locally generated files were used in the public workflow:
+
+- `NHANES_bridge_1999_2004_BIA_DXA.csv.gz`
+- `NHANES_2013_2014_outcome_bundle.csv.gz`
+
 ## Preprocessing
 
 ### Bridge dataset

@@ -24,6 +24,42 @@ Main variables used:
 - whole-body fat mass
 - osteoporosis-related DXA outcome variables
 
+## Downloaded Files Used Locally
+
+Local raw files used:
+
+- `raw/all/HN08_ALL(SAS).zip`
+- `raw/all/HN09_ALL(SAS).zip`
+- `raw/all/HN10_ALL(SAS).zip`
+- `raw/all/HN11_ALL(SAS).zip`
+- `raw/all/hn08_all.sas7bdat`
+- `raw/all/hn09_all.sas7bdat`
+- `raw/all/hn10_all.sas7bdat`
+- `raw/all/hn11_all.sas7bdat`
+- `raw/dxa/hn08_dxa.sas7bdat`
+- `raw/dxa/hn09_dxa.sas7bdat`
+- `raw/dxa/hn10_dxa.sas7bdat`
+- `raw/dxa/hn11_dxa.sas7bdat`
+
+Format:
+
+- downloaded SAS archives for ALL tables
+- extracted `sas7bdat` files for ALL and DXA tables
+- local processed outputs written as `.rds` and `.csv.gz`
+
+Representative local file date:
+
+- checked in local workspace on `2026-04-20`
+
+## Local Version Notes
+
+The KNHANES workflow in this repository corresponds to survey years `2008-2011`.
+
+The locally generated merged files were:
+
+- `KNHANES_2008_2011_ALL_DXA_merged.rds`
+- `KNHANES_2008_2011_ALL_DXA_merged.csv.gz`
+
 ## Important Clarification
 
 The downloaded KNHANES dataset was used as a **DXA dataset**, not as a BIA dataset for this project.
