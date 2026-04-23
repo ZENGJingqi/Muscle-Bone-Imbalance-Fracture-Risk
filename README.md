@@ -6,6 +6,17 @@ This repository accompanies a manuscript on a muscle-bone imbalance phenotype as
 
 ![Graphical abstract](assets/graphical_abstract.svg)
 
+## How to Use This Repository
+
+This repository is structured around the manuscript rather than around a software package.
+
+Recommended reading order:
+
+1. Start with the current `README.md` for the study rationale and dataset roles.
+2. Open `datasets/Chinese-Human-Body-Composition/README.md` for the discovery cohort access note.
+3. Open `datasets/NHANES`, `datasets/KNHANES`, and `datasets/HRS` for external dataset-specific preprocessing, analysis strategy, downloaded file records, and concise findings.
+4. Use `code/` only if you want to reproduce the public external workflows locally after obtaining the source datasets yourself.
+
 ## Study Scope
 
 The manuscript combines:
@@ -44,6 +55,15 @@ This repository instead focuses on the external datasets and the associated repr
 - `NHANES`
 - `KNHANES`
 - `HRS`
+
+## Reproducibility Map
+
+| Question | Dataset | Main Folder |
+| --- | --- | --- |
+| Original discovery signal | Chinese Human Body Composition Dataset | `datasets/Chinese-Human-Body-Composition` |
+| BIA-to-DXA bridge and DXA-based risk consistency | `NHANES` | `datasets/NHANES` and `code/NHANES` |
+| East Asian DXA external consistency | `KNHANES` | `datasets/KNHANES` and `code/KNHANES` |
+| Older-adult clinical outcome context | `HRS` | `datasets/HRS` and `code/HRS` |
 
 ## Repository Structure
 
@@ -104,6 +124,10 @@ The public code in this repository is limited to the external datasets:
 - `code/HRS`
 
 No public participant-level code or data release is provided here for the original Chinese discovery cohort.
+
+## Citation
+
+If this repository supports your work, please cite the associated manuscript once the final paper details are available.
 
 ## Planned Expansion
 

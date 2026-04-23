@@ -46,3 +46,11 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 
 - `prepare_hrs_fat_2012_2022.R`
 - `run_hrs_fat_event_analysis.R`
+
+## Minimal Reproduction Order
+
+1. Obtain the relevant external dataset files through the official source.
+2. Place the downloaded files under `data/raw/` using your own approved local naming.
+3. Run the dataset-specific preprocessing script first.
+4. Run the dataset-specific analysis script second.
+5. Inspect generated outputs under `outputs/`.
