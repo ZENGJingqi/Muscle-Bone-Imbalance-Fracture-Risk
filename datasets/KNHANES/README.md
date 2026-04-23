@@ -96,5 +96,5 @@ However, KNHANES should be interpreted as **East Asian DXA external validation**
 
 ## Local Script References
 
-- `scripts/prepare_knhanes_2008_2011.R`
-- `scripts/run_knhanes_external_analysis.R`
+- `code/KNHANES/prepare_knhanes_2008_2011.R`
+- `code/KNHANES/run_knhanes_external_analysis.R`

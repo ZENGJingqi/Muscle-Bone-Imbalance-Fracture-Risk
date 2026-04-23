@@ -20,6 +20,10 @@ The goal is not to claim universal transferability of the original Chinese cutof
 Muscle-Bone-Imbalance-Fracture-Risk/
   README.md
   .gitignore
+  code/
+    NHANES/
+    KNHANES/
+    HRS/
   datasets/
     NHANES/
       README.md
@@ -65,6 +69,12 @@ The current repository includes documentation for:
 - `NHANES`
 - `KNHANES`
 - `HRS`
+
+It also includes a lightweight public code folder:
+
+- `code/NHANES`
+- `code/KNHANES`
+- `code/HRS`
 
 Additional datasets can be added later using:
 

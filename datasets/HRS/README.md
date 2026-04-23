@@ -101,5 +101,5 @@ HRS should **not** be interpreted as:
 
 ## Local Script References
 
-- `scripts/prepare_hrs_fat_2012_2022.R`
-- `scripts/run_hrs_fat_event_analysis.R`
+- `code/HRS/prepare_hrs_fat_2012_2022.R`
+- `code/HRS/run_hrs_fat_event_analysis.R`

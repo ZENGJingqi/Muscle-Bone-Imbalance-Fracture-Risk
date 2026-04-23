@@ -132,4 +132,6 @@ NHANES did **not** support direct transferability of the original Chinese `MBR =
 
 ## Local Script References
 
-- `scripts/run_nhanes_external_analysis.R`
+- `code/NHANES/prepare_nhanes_inputs.py`
+- `code/NHANES/check_nhanes_consistency.py`
+- `code/NHANES/run_nhanes_external_analysis.R`
