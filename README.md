@@ -2,9 +2,11 @@
 
 This repository accompanies a manuscript on a muscle-bone imbalance phenotype associated with fracture-related and osteoporosis-related burden. It documents the study context, dataset availability, downloaded external files, and lightweight public preprocessing/analysis workflows that can help readers reproduce the extension analyses.
 
-## Graphical Abstract
+## Study Overview
 
-![Graphical abstract](assets/graphical_abstract.svg)
+![Study overview](assets/study_overview.png)
+
+This figure is a compact study overview rather than a formal graphical abstract. It summarizes the clinical context, marker definition, external datasets, and the main interpretation boundary of the manuscript.
 
 ## How to Use This Repository
 
@@ -72,7 +74,7 @@ Muscle-Bone-Imbalance-Fracture-Risk/
   README.md
   .gitignore
   assets/
-    graphical_abstract.svg
+    study_overview.png
   code/
     NHANES/
     KNHANES/
