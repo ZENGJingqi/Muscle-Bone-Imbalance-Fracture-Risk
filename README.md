@@ -6,7 +6,9 @@ This repository accompanies a manuscript on a muscle-bone imbalance phenotype as
 
 ![Study overview](assets/study_overview.png)
 
-This figure is a compact study overview rather than a formal graphical abstract. It summarizes the clinical context, marker definition, external datasets, and the main interpretation boundary of the manuscript.
+This overview summarizes the methodological logic of the study and the rationale for evaluating a body composition-based muscle-bone imbalance phenotype in relation to osteoporosis and fracture-related risk. It contrasts dual-energy X-ray absorptiometry as the reference standard with bioelectrical impedance analysis as a scalable body-composition assessment tool, and it outlines the discovery cohort, which includes 152,449 healthy adults with measurements for age, height, weight, muscle mass, bone mineral content, fat percentage, intracellular fluid, extracellular fluid, and protein. These body-composition measurements were validated against isotopic labeling, magnetic resonance imaging, and dual-energy X-ray absorptiometry.
+
+Because the discovery dataset does not include reference bone mineral density values, a conventional supervised modeling framework was not applicable. The study therefore adopted an indicator redirection strategy aimed at identifying body-composition indicators with stronger discriminability and then examining their associativity with osteoporosis- and fracture-related outcomes through the external extension datasets.
 
 ## How to Use This Repository
 
