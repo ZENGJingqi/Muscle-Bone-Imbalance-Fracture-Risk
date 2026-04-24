@@ -8,6 +8,14 @@ This part of the project asked a different question:
 
 Do older adults show clear age- and sex-related gradients in fall, hip fracture, and osteoporosis outcomes that are compatible with the broader clinical relevance of a muscle-bone imbalance phenotype?
 
+## Official Source
+
+- official portal: <https://hrsdata.isr.umich.edu/data-products>
+
+## Scope Used in This Project
+
+- `RAND HRS Fat Files 2012-2022`
+
 ## Data Components Used
 
 ### RAND HRS Fat Files

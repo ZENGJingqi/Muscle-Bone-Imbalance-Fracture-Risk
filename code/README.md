@@ -1,12 +1,13 @@
 # Code
 
-This folder contains lightweight public code corresponding to the three external datasets used in the project.
+This folder contains lightweight public code corresponding to the four external datasets used in the project.
 
 The code is organized by dataset:
 
 - `code/NHANES`
 - `code/KNHANES`
 - `code/HRS`
+- `code/CHARLS`
 
 ## Expected Local Directory Layout
 
@@ -46,6 +47,11 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 
 - `prepare_hrs_fat_2012_2022.R`
 - `run_hrs_fat_event_analysis.R`
+
+### CHARLS
+
+- `prepare_charls_clinical_context.R`
+- `run_charls_clinical_context_analysis.R`
 
 ## Minimal Reproduction Order
 

@@ -4,6 +4,14 @@
 
 KNHANES was used as an East Asian external DXA validation dataset. Its value was not in replicating the original Chinese BIA-based marker directly, but in testing whether a conceptually corresponding DXA-derived marker showed consistent associations with osteoporosis-related outcomes.
 
+## Official Source
+
+- official portal: <https://knhanes.kdca.go.kr/knhanes/eng/index.do>
+
+## Scope Used in This Project
+
+- `2008-2011`
+
 ## Data Components Used
 
 ### KNHANES 2008-2011

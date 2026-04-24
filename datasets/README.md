@@ -1,6 +1,6 @@
 # Datasets
 
-Each dataset has its own folder so that preprocessing notes, analysis strategy, and concise findings remain modular.
+Each dataset has its own folder so that scope, official source URLs, preprocessing notes, analysis strategy, and concise findings remain modular.
 
 Current datasets:
 
@@ -8,6 +8,7 @@ Current datasets:
 - `NHANES`
 - `KNHANES`
 - `HRS`
+- `CHARLS`
 
 Recommended reading order:
 
@@ -15,6 +16,7 @@ Recommended reading order:
 2. `NHANES`
 3. `KNHANES`
 4. `HRS`
+5. `CHARLS`
 
 Future datasets can be added by copying:
 

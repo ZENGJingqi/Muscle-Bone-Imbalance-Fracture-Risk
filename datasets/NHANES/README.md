@@ -7,6 +7,15 @@ NHANES provided the most important external support for the manuscript. It was u
 1. `BIA-DXA bridge`
 2. `DXA-derived MBR` association with fracture-related risk markers
 
+## Official Source
+
+- official portal: <https://wwwn.cdc.gov/nchs/nhanes/>
+
+## Scope Used in This Project
+
+- `1999-2004` for bridge analysis
+- `2013-2014` for DXA-derived MBR risk-consistency analysis
+
 ## Data Components Used
 
 ### NHANES 1999-2004
