@@ -2,7 +2,7 @@
 
 ## Role in the Project
 
-KNHANES was used as an East Asian external DXA validation dataset. Its value was not in replicating the original Chinese BIA-based marker directly, but in testing whether a conceptually corresponding DXA-derived marker showed consistent associations with osteoporosis-related outcomes.
+KNHANES was used as an East Asian DXA structural-consistency dataset. Its value was not in replicating the original Chinese BIA-based marker directly, but in testing whether a conceptually corresponding DXA-derived marker showed consistent associations with osteoporosis-related outcomes.
 
 ## Official Source
 
@@ -136,7 +136,7 @@ KNHANES supported the same overall direction observed in NHANES:
 - higher `DXA-derived MBR` tracked with lower bone status
 - the marker behaved as a muscle-bone imbalance phenotype rather than a simple body-size measure
 
-However, KNHANES should be interpreted as **East Asian DXA external validation**, not as a direct external replication of the original Chinese BIA-based threshold.
+However, KNHANES should be interpreted as **East Asian DXA structural consistency evidence**, not as a direct external replication of the original Chinese BIA-based threshold.
 
 ## Local Script References
 

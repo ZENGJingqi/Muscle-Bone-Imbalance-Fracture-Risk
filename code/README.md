@@ -1,6 +1,6 @@
 # Code
 
-This folder contains lightweight public code corresponding to the four external datasets used in the project.
+This folder contains lightweight public code corresponding to the external datasets and sensitivity analyses used in the project.
 
 The code is organized by dataset:
 
@@ -8,6 +8,7 @@ The code is organized by dataset:
 - `code/KNHANES`
 - `code/HRS`
 - `code/CHARLS`
+- `code/Sensitivity`
 
 ## Expected Local Directory Layout
 
@@ -29,6 +30,7 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 - The scripts are provided to document preprocessing logic, analysis structure, and output generation.
 - Users should adapt file naming and access requirements according to their own approved dataset downloads.
 - No public participant-level code or data release is provided here for the original Chinese discovery cohort.
+- Scripts used only for manuscript drafting, Word/PDF generation, submission formatting, or local writing records are not included.
 
 ## Script Summary
 
@@ -53,10 +55,16 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 - `prepare_charls_clinical_context.R`
 - `run_charls_clinical_context_analysis.R`
 
+### Sensitivity
+
+- `run_survey_weighted_sensitivity.R`
+- `run_rcs_threshold_performance.R`
+
 ## Minimal Reproduction Order
 
 1. Obtain the relevant external dataset files through the official source.
 2. Place the downloaded files under `data/raw/` using your own approved local naming.
 3. Run the dataset-specific preprocessing script first.
 4. Run the dataset-specific analysis script second.
-5. Inspect generated outputs under `outputs/`.
+5. After NHANES and KNHANES processed files are available, run the sensitivity scripts if survey-weighted, restricted cubic spline, or threshold-performance outputs are needed.
+6. Inspect generated outputs under `outputs/`.

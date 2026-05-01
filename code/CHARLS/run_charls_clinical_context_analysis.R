@@ -6,8 +6,8 @@ library(readr)
 library(tidyr)
 
 root_dir <- normalizePath(".", winslash = "/", mustWork = TRUE)
-clean_path <- file.path(root_dir, "外部数据", "cleaned", "05_CHARLS", "CHARLS_2011_2020_clinical_context_bundle.rds")
-charls_dir <- file.path(root_dir, "工作记录", "analysis_outputs", "05_CHARLS")
+clean_path <- file.path(root_dir, "data", "processed", "CHARLS", "CHARLS_2011_2020_clinical_context_bundle.rds")
+charls_dir <- file.path(root_dir, "outputs", "charls")
 figure_dir <- file.path(charls_dir, "figures")
 table_dir <- file.path(charls_dir, "tables")
 

@@ -1,6 +1,8 @@
 # Muscle-Bone-Imbalance-Fracture-Risk
 
-This repository accompanies a manuscript on a muscle-bone imbalance phenotype associated with fracture-related and osteoporosis-related burden. It documents the study scope, dataset access routes, downloaded external files, and lightweight public preprocessing and analysis workflows that can help readers reproduce the external extension analyses.
+This repository documents the public reproducibility workflow for a study on a muscle-bone imbalance phenotype associated with fracture-related and osteoporosis-related burden. It provides dataset access routes, downloaded external file records, preprocessing logic, and modeling scripts for the external analyses.
+
+This repository is not a manuscript-writing repository. It does not include Word/PDF generation scripts, submission files, drafting notes, or local manuscript assembly code.
 
 ## Study Overview
 
@@ -17,7 +19,7 @@ Recommended reading order:
 1. Start with the current `README.md` for the study rationale and dataset roles.
 2. Open `datasets/Chinese-Human-Body-Composition/README.md` for the discovery cohort access note.
 3. Open `datasets/NHANES`, `datasets/KNHANES`, `datasets/HRS`, and `datasets/CHARLS` for dataset-specific scope, data-source URLs, preprocessing notes, and concise findings.
-4. Use `code/` only if you want to reproduce the public external workflows locally after obtaining the source datasets yourself.
+4. Use `code/` only if you want to reproduce the public external cleaning and modeling workflows locally after obtaining the source datasets yourself.
 
 ## Study Scope
 
@@ -64,7 +66,7 @@ This repository instead focuses on the external datasets and the associated repr
 
 ### KNHANES
 
-- role: `East Asian DXA external validation`
+- role: `East Asian DXA structural-consistency analysis`
 - range used: `2008-2011`
 - official source: <https://knhanes.kdca.go.kr/knhanes/eng/index.do>
 
@@ -86,9 +88,10 @@ This repository instead focuses on the external datasets and the associated repr
 | --- | --- | --- |
 | Original discovery signal | Chinese Human Body Composition Dataset | `datasets/Chinese-Human-Body-Composition` |
 | BIA-to-DXA bridge and DXA-based risk consistency | `NHANES` | `datasets/NHANES` and `code/NHANES` |
-| East Asian DXA external consistency | `KNHANES` | `datasets/KNHANES` and `code/KNHANES` |
+| East Asian DXA structural consistency | `KNHANES` | `datasets/KNHANES` and `code/KNHANES` |
 | U.S. older-adult clinical outcome context | `HRS` | `datasets/HRS` and `code/HRS` |
 | Chinese older-adult clinical outcome context | `CHARLS` | `datasets/CHARLS` and `code/CHARLS` |
+| Survey-weighted, RCS, and threshold-performance sensitivity analyses | `NHANES` and `KNHANES` | `code/Sensitivity` |
 
 ## Repository Structure
 
@@ -103,6 +106,7 @@ Muscle-Bone-Imbalance-Fracture-Risk/
     KNHANES/
     HRS/
     CHARLS/
+    Sensitivity/
   datasets/
     Chinese-Human-Body-Composition/
       README.md
@@ -141,7 +145,7 @@ Reasons:
 - dataset-specific notes for the Chinese cohort and the four external datasets
 - official dataset source URLs and the exact survey ranges used
 - downloaded file names, formats, and locally checked version notes for the external datasets
-- lightweight public code for NHANES, KNHANES, HRS, and CHARLS
+- lightweight public code for NHANES, KNHANES, HRS, CHARLS, and sensitivity analyses
 - a template for adding future datasets such as `SHARE`
 
 ## Public Analysis Code
@@ -152,8 +156,11 @@ The public code in this repository is limited to the external datasets:
 - `code/KNHANES`
 - `code/HRS`
 - `code/CHARLS`
+- `code/Sensitivity`
 
 No public participant-level code or data release is provided here for the original Chinese discovery cohort.
+
+The public code is limited to reproducible data cleaning, variable derivation, and statistical modeling. Scripts used only to draft manuscript text, assemble Word documents, polish submission files, or manage local working notes are intentionally excluded.
 
 ## Citation
 

@@ -1,4 +1,4 @@
-﻿library(dplyr)
+library(dplyr)
 library(forcats)
 library(ggplot2)
 library(ggsci)
@@ -319,20 +319,20 @@ figure4 <- ggplot(forest_dat, aes(x = estimate, y = fct_rev(outcome), color = gr
 save_pub_plot(figure4, "Figure_KN_4_Adjusted_Forest", width = 14.0, height = 8.4)
 
 results_lines <- c(
-  "# KNHANES 2008-2011 初步分析结果",
-  paste0("日期：", Sys.Date()),
+  "# KNHANES 2008-2011 Analysis Summary",
+  paste0("Date: ", Sys.Date()),
   "",
-  "## 数据范围",
-  paste0("- 分析样本：年龄 >=50 岁，且具备 DXA-derived MBR 所需变量。n = ", nrow(analysis_50)),
-  paste0("- 女性亚组：n = ", nrow(female_50)),
-  paste0("- 男性亚组：n = ", nrow(male_50)),
+  "## Data Scope",
+  paste0("- Analytic sample: age >=50 years with variables required for DXA-derived MBR. n = ", nrow(analysis_50)),
+  paste0("- Female subgroup: n = ", nrow(female_50)),
+  paste0("- Male subgroup: n = ", nrow(male_50)),
   "",
-  "## 口径说明",
-  "- 本轮 KNHANES 结果使用 DXA-derived MBR，而不是中国原始 BIA-based MBR。",
-  "- 当前为 pooled 2008-2011 的未加权初步分析，用于判断外部方向一致性。",
-  "- 目前将 dx_ost 及其分位字段中的 3 解释为 osteoporosis positive；正式入文前仍建议结合说明书复核。",
+  "## Analysis Notes",
+  "- KNHANES uses DXA-derived MBR rather than the original Chinese BIA-based MBR.",
+  "- The primary pooled 2008-2011 models are unweighted external structural-consistency analyses.",
+  "- Osteoporosis-positive categories are derived from the KNHANES DXA osteoporosis variables according to the project codebook review.",
   "",
-  "## 主要输出",
+  "## Main Outputs",
   paste0("- Figure KN1: ", file.path(figure_dir, "Figure_KN_1_MBR_Distribution.pdf")),
   paste0("- Figure KN2: ", file.path(figure_dir, "Figure_KN_2_Structure_By_Quartile.pdf")),
   paste0("- Figure KN3: ", file.path(figure_dir, "Figure_KN_3_Osteoporosis_Prevalence.pdf")),

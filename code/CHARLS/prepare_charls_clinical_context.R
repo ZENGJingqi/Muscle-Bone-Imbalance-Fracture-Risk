@@ -4,10 +4,10 @@ library(readr)
 library(stringr)
 
 root_dir <- normalizePath(".", winslash = "/", mustWork = TRUE)
-charls_dir <- file.path(root_dir, "外部数据", "CHARLS")
+charls_dir <- file.path(root_dir, "data", "raw", "CHARLS")
 extract_dir <- file.path(charls_dir, "extracted")
-clean_dir <- file.path(root_dir, "外部数据", "cleaned", "05_CHARLS")
-check_dir <- file.path(root_dir, "工作记录", "analysis_outputs", "05_CHARLS", "checks")
+clean_dir <- file.path(root_dir, "data", "processed", "CHARLS")
+check_dir <- file.path(root_dir, "outputs", "charls", "checks")
 
 dir.create(clean_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(check_dir, recursive = TRUE, showWarnings = FALSE)

@@ -2,12 +2,15 @@
 raw/
 data/
 external_data/
+data/raw/
+data/processed/
 
 # Large outputs
 figures/
 plots/
 results/
 output/
+outputs/
 tmp/
 
 # Binary office files
@@ -19,7 +22,27 @@ tmp/
 *.zip
 *.7z
 *.rar
+*.tar
+*.gz
+
+# Participant-level data and survey formats
+*.csv
+*.csv.gz
+*.rds
+*.RData
+*.sas7bdat
+*.xpt
+*.dta
+*.sav
+*.por
 
 # OS / editor
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Runtime cache
+__pycache__/
+.Rhistory
+.Rproj.user/
+.ipynb_checkpoints/

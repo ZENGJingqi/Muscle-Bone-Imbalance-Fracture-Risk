@@ -1,4 +1,4 @@
-﻿library(haven)
+library(haven)
 library(dplyr)
 library(readr)
 library(stringr)
