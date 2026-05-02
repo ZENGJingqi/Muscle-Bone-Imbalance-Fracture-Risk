@@ -8,6 +8,7 @@ The code is organized by dataset:
 - `code/KNHANES`
 - `code/HRS`
 - `code/CHARLS`
+- `code/SHARE`
 - `code/Sensitivity`
 
 ## Expected Local Directory Layout
@@ -55,6 +56,10 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 - `prepare_charls_clinical_context.R`
 - `run_charls_clinical_context_analysis.R`
 
+### SHARE
+
+- `analyze_share_rel9.R`
+
 ### Sensitivity
 
 - `run_survey_weighted_sensitivity.R`
@@ -66,5 +71,6 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 2. Place the downloaded files under `data/raw/` using your own approved local naming.
 3. Run the dataset-specific preprocessing script first.
 4. Run the dataset-specific analysis script second.
-5. After NHANES and KNHANES processed files are available, run the sensitivity scripts if survey-weighted, restricted cubic spline, or threshold-performance outputs are needed.
-6. Inspect generated outputs under `outputs/`.
+5. Run the SHARE script after obtaining Gateway Harmonized SHARE Release 9.0.0 if European older-adult clinical outcome context outputs are needed.
+6. After NHANES and KNHANES processed files are available, run the sensitivity scripts if survey-weighted, restricted cubic spline, or threshold-performance outputs are needed.
+7. Inspect generated outputs under `outputs/`.

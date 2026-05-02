@@ -9,6 +9,7 @@ Current datasets:
 - `KNHANES`
 - `HRS`
 - `CHARLS`
+- `SHARE`
 
 Recommended reading order:
 
@@ -17,6 +18,7 @@ Recommended reading order:
 3. `KNHANES`
 4. `HRS`
 5. `CHARLS`
+6. `SHARE`
 
 Future datasets can be added by copying:
 

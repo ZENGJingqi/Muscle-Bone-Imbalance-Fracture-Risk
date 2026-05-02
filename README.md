@@ -8,7 +8,7 @@ This repository is not a manuscript-writing repository. It does not include Word
 
 ![Study overview](assets/study_overview.png)
 
-This overview summarizes the methodological logic of the study and the rationale for evaluating a body composition-based muscle-bone imbalance phenotype in relation to osteoporosis and fracture-related risk. The manuscript combines one original Chinese discovery dataset with four external datasets that address bridge validity, structural consistency, and older-adult clinical outcome context.
+This overview summarizes the methodological logic of the study and the rationale for evaluating a body composition-based muscle-bone imbalance phenotype in relation to osteoporosis and fracture-related risk. The manuscript combines one original Chinese discovery dataset with five external datasets that address bridge validity, structural consistency, and older-adult clinical outcome context.
 
 ## How to Use This Repository
 
@@ -18,7 +18,7 @@ Recommended reading order:
 
 1. Start with the current `README.md` for the study rationale and dataset roles.
 2. Open `datasets/Chinese-Human-Body-Composition/README.md` for the discovery cohort access note.
-3. Open `datasets/NHANES`, `datasets/KNHANES`, `datasets/HRS`, and `datasets/CHARLS` for dataset-specific scope, data-source URLs, preprocessing notes, and concise findings.
+3. Open `datasets/NHANES`, `datasets/KNHANES`, `datasets/HRS`, `datasets/CHARLS`, and `datasets/SHARE` for dataset-specific scope, data-source URLs, preprocessing notes, and concise findings.
 4. Use `code/` only if you want to reproduce the public external cleaning and modeling workflows locally after obtaining the source datasets yourself.
 
 ## Study Scope
@@ -26,11 +26,12 @@ Recommended reading order:
 The manuscript combines:
 
 - one original Chinese discovery dataset
-- four external datasets used for extension and validation:
+- five external datasets used for extension and validation:
   - `NHANES`
   - `KNHANES`
   - `HRS`
   - `CHARLS`
+  - `SHARE`
 
 The goal is not to claim universal transferability of the original Chinese cutoff. Instead, the combined analyses were used to address four distinct questions:
 
@@ -38,6 +39,7 @@ The goal is not to claim universal transferability of the original Chinese cutof
 2. Does a DXA-derived muscle-to-bone ratio show structural and risk consistency in external populations?
 3. Do U.S. older-adult clinical outcomes show a compatible age- and sex-related context?
 4. Do Chinese older-adult clinical outcomes show a compatible age- and sex-related context?
+5. Do European older-adult clinical outcomes show a compatible age- and sex-related context?
 
 ## Chinese Discovery Dataset
 
@@ -82,6 +84,12 @@ This repository instead focuses on the external datasets and the associated repr
 - range used: `2011, 2013, 2015, 2018, 2020 main waves` plus `Harmonized CHARLS`
 - official source: <https://charls.charlsdata.com/>
 
+### SHARE
+
+- role: `European older-adult clinical outcome context`
+- range used: `Gateway Harmonized SHARE Release 9.0.0, 2004-2022`
+- official source: <https://releases.sharedataportal.eu/>
+
 ## Reproducibility Map
 
 | Question | Dataset | Main Folder |
@@ -91,6 +99,7 @@ This repository instead focuses on the external datasets and the associated repr
 | East Asian DXA structural consistency | `KNHANES` | `datasets/KNHANES` and `code/KNHANES` |
 | U.S. older-adult clinical outcome context | `HRS` | `datasets/HRS` and `code/HRS` |
 | Chinese older-adult clinical outcome context | `CHARLS` | `datasets/CHARLS` and `code/CHARLS` |
+| European older-adult clinical outcome context | `SHARE` | `datasets/SHARE` and `code/SHARE` |
 | Survey-weighted, RCS, and threshold-performance sensitivity analyses | `NHANES` and `KNHANES` | `code/Sensitivity` |
 
 ## Repository Structure
@@ -118,6 +127,8 @@ Muscle-Bone-Imbalance-Fracture-Risk/
       README.md
     CHARLS/
       README.md
+    SHARE/
+      README.md
     TEMPLATE_NEW_DATASET.md
 ```
 
@@ -125,7 +136,7 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 
 - Original Chinese cohort: `BIA-based MBR`
 - NHANES / KNHANES: `DXA-derived MBR`
-- HRS / CHARLS: `older-adult clinical outcome context`
+- HRS / CHARLS / SHARE: `older-adult clinical outcome context`
 - Overall concept: `muscle-bone imbalance phenotype`
 
 The current evidence supports the biological, structural, and clinical relevance of this phenotype, while indicating that the original Chinese threshold should be treated as a cohort-specific discovery threshold rather than a universally transferable screening cutoff.
@@ -142,11 +153,11 @@ Reasons:
 
 ## What This Repository Provides
 
-- dataset-specific notes for the Chinese cohort and the four external datasets
+- dataset-specific notes for the Chinese cohort and the five external datasets
 - official dataset source URLs and the exact survey ranges used
 - downloaded file names, formats, and locally checked version notes for the external datasets
-- lightweight public code for NHANES, KNHANES, HRS, CHARLS, and sensitivity analyses
-- a template for adding future datasets such as `SHARE`
+- lightweight public code for NHANES, KNHANES, HRS, CHARLS, SHARE, and sensitivity analyses
+- a template for adding future datasets
 
 ## Public Analysis Code
 
@@ -156,6 +167,7 @@ The public code in this repository is limited to the external datasets:
 - `code/KNHANES`
 - `code/HRS`
 - `code/CHARLS`
+- `code/SHARE`
 - `code/Sensitivity`
 
 No public participant-level code or data release is provided here for the original Chinese discovery cohort.
