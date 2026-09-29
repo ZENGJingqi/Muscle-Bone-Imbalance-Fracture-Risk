@@ -10,6 +10,7 @@ The code is organized by dataset:
 - `code/CHARLS`
 - `code/SHARE`
 - `code/Sensitivity`
+- `code/Publication` (current reviewed analyses)
 
 ## Expected Local Directory Layout
 
@@ -34,6 +35,13 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 - Scripts used only for manuscript drafting, Word/PDF generation, submission formatting, or local writing records are not included.
 
 ## Script Summary
+
+### Current analysis
+
+- `Publication/reanalyse.R`: NHANES bridge, NHANES and KNHANES associations, survey sensitivity, and component comparisons
+- `Publication/reanalyse_context.R`: respondent-clustered HRS, CHARLS, and SHARE context models
+
+Use the input contracts and commands in the repository-root `REPRODUCIBILITY.md`. The dataset-specific scripts below are retained for source preparation or historical analyses.
 
 ### NHANES
 
@@ -72,5 +80,5 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 3. Run the dataset-specific preprocessing script first.
 4. Run the dataset-specific analysis script second.
 5. Run the SHARE script after obtaining Gateway Harmonized SHARE Release 9.0.0 if European older-adult clinical outcome context outputs are needed.
-6. After NHANES and KNHANES processed files are available, run the sensitivity scripts if survey-weighted, restricted cubic spline, or threshold-performance outputs are needed.
-7. Inspect generated outputs under `outputs/`.
+6. After processing the required inputs, run the current `code/Publication` entries for results matching the reviewed tables.
+7. Inspect generated outputs under `outputs/` and compare them with `public_data/`.

@@ -1,0 +1,62 @@
+[
+  {
+    "input": "01_NHANES/NHANES_2013_2014_outcome_bundle.csv.gz",
+    "sha256": "d37764ca0bbddd90a443d987ed57bcf1bf7a4ab4aad93c1abb16a5fc66b40b6d",
+    "bytes": 2517978
+  },
+  {
+    "input": "02_KNHANES/KNHANES_2008_2011_ALL_DXA_merged.rds",
+    "sha256": "20eceddeeed66f6ada1bc7e9e51875a73f51b4418b64cf65769a4107f7a67ec0",
+    "bytes": 37339168
+  },
+  {
+    "input": "01_NHANES/NHANES_bridge_1999_2004_BIA_DXA.csv.gz",
+    "sha256": "990afaecfea4f10fb2709649ae0394ad55972ef2110d1fcd4faf5f6d1f631544",
+    "bytes": 28917319
+  },
+  {
+    "input": "03_HRS/HRS_fat_2012_2022_event_bundle.rds",
+    "sha256": "7d4f497e2911ba38e5395f20c837485d229a99c7c7d1018d729ab9a740a48f80",
+    "bytes": 1439677
+  },
+  {
+    "input": "05_CHARLS/CHARLS_2011_2020_clinical_context_bundle.rds",
+    "sha256": "715450a168820e4dab636150b3998510a43f41e7873920aa7736bc80f0ec43dc",
+    "bytes": 725621
+  },
+  {
+    "input": "SHARE/share_rel9_outcomes_long_age50plus.rds",
+    "sha256": "a00fcaa9b9024ef8a1f1ea771a9c0abe91ecb45d7fcd060259a51457730fed51",
+    "bytes": 10730366
+  },
+  {
+    "input": "longitudinal/randhrs1992_2022v1.sas7bdat",
+    "sha256": "0d0564a5f3673db887485a03d0bdc2f2ddbcc98a7a77392a4288d31b8b0273b5",
+    "bytes": 7183191040
+  },
+  {
+    "input": "2013_wave2/Weights.dta",
+    "sha256": "a76da3ccbe8b6269e94c6661a2f061a3e8372ebe4a2b32dd37e71b09bc225cc0",
+    "bytes": 1583571
+  },
+  {
+    "input": "2015_wave3/Weights.dta",
+    "sha256": "854a1cdc7eb1a298f649354a435ff308d79e1f96540d38fa04a96b51a26cd3d9",
+    "bytes": 1247980
+  },
+  {
+    "input": "2018_wave4/Weights.dta",
+    "sha256": "c70239a9e86bbed40d3d8a3b6005fcbe45ae6562fafcdeba965f3f05ff87838e",
+    "bytes": 1260316
+  },
+  {
+    "input": "2020_wave5/Weights.dta",
+    "sha256": "83b964e397f33b888e70df37c2da6a3ecc36d95fc2d565701bd509280989ed6a",
+    "bytes": 1219608
+  },
+  {
+    "input": "2011_wave1/weight.dta",
+    "sha256": "de6e2d9f6b84922ad2e53bcece868eb2ab831e5918da135d364912e597201571",
+    "bytes": 1193435
+  }
+]

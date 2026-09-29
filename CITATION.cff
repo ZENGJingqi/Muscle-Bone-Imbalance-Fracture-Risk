@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Development snapshot: cite the exact commit. Confirm contributors before an immutable release; no DOI has been assigned."
+type: software
+title: "Muscle-to-bone proportionality: revised analysis code and aggregate results"
+authors:
+  - family-names: Zeng
+    given-names: Jingqi
+version: 0.3.0-rc.1
+repository-code: "https://github.com/ZENGJingqi/Muscle-Bone-Imbalance-Fracture-Risk"
+abstract: "Exploratory cross-sectional MBR analysis with harmonized DXA components, five-imputation pooling, survey sensitivity and component comparisons. Not a validated clinical tool."
+keywords:
+  - body composition
+  - osteoporosis
+  - reproducibility

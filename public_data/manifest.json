@@ -1,0 +1,207 @@
+[
+  {
+    "file": "adjusted_associations.csv",
+    "rows": 20,
+    "columns": [
+      "dataset",
+      "outcome",
+      "label",
+      "method",
+      "n",
+      "events",
+      "metric",
+      "estimate",
+      "conf_low",
+      "conf_high",
+      "p_value",
+      "mbr_sd"
+    ],
+    "sha256": "c989a3210567ea70177cf70e8d94af51bc4d9d1a704a170b0ec5e2ca3e76bbc4"
+  },
+  {
+    "file": "bridge_per_imputation.csv",
+    "rows": 20,
+    "columns": [
+      "pair",
+      "weighted",
+      "imputation",
+      "n",
+      "r",
+      "z",
+      "variance_z",
+      "design_df"
+    ],
+    "sha256": "745ce4fddf5d62344b5fe1f9003453e8c0c198deaf790d60836dc9a3cc952a75"
+  },
+  {
+    "file": "bridge_pooled.csv",
+    "rows": 4,
+    "columns": [
+      "pair",
+      "weighted",
+      "n",
+      "imputations",
+      "r",
+      "conf_low",
+      "conf_high",
+      "within_variance",
+      "between_variance"
+    ],
+    "sha256": "55d711134cc2035e01c0922f702bc14fe64bcba36c8ba4b5df41ca3672e0aa36"
+  },
+  {
+    "file": "component_cv_performance.csv",
+    "rows": 80,
+    "columns": [
+      "dataset",
+      "outcome",
+      "model",
+      "n",
+      "metric",
+      "value",
+      "seed",
+      "folds"
+    ],
+    "sha256": "88f00f0310817621c0ce9f36664442b5ca3fb648cdb5187a4dd1c1901bcdba6d"
+  },
+  {
+    "file": "context_clustered_associations.csv",
+    "rows": 48,
+    "columns": [
+      "dataset",
+      "scope",
+      "outcome",
+      "contrast",
+      "weighted",
+      "n",
+      "participants",
+      "events",
+      "estimate",
+      "conf_low",
+      "conf_high",
+      "p_value"
+    ],
+    "sha256": "708d2c10166d9ed32899ade91cec242b761097461f49d0adb391e3ad2c1aed7d"
+  },
+  {
+    "file": "context_weight_coverage.csv",
+    "rows": 11,
+    "columns": [
+      "dataset",
+      "survey_year",
+      "records",
+      "participants",
+      "positive_weight"
+    ],
+    "sha256": "3c7b12c4722b650b594a1eacff5a7ea7961b011af1291996aa9a91c63e471db5"
+  },
+  {
+    "file": "KNHANES_description.csv",
+    "rows": 2,
+    "columns": [
+      "sex",
+      "n",
+      "age_mean",
+      "mbr_median",
+      "mbr_q1",
+      "mbr_q3",
+      "lean_mean",
+      "bmc_mean"
+    ],
+    "sha256": "a538949821f246dd2b14593d132cecf533107e1be3643f856c61be263564902d"
+  },
+  {
+    "file": "NHANES_description.csv",
+    "rows": 2,
+    "columns": [
+      "sex",
+      "n",
+      "age_mean",
+      "mbr_median",
+      "mbr_q1",
+      "mbr_q3",
+      "lean_mean",
+      "bmc_mean"
+    ],
+    "sha256": "e66d33113b1fcf522a3fa2a4c671ebed06ebe68b4471d114bc837fcf11c4f71f"
+  },
+  {
+    "file": "sample_flow.csv",
+    "rows": 10,
+    "columns": [
+      "dataset",
+      "outcome",
+      "source_records",
+      "eligible",
+      "complete_cases",
+      "events",
+      "survey_complete",
+      "mbr_mean",
+      "mbr_sd"
+    ],
+    "sha256": "743c9fd34ed6412ce4b32b30ab9948713a04dd8885015d8b87d37fd0cd3f003b"
+  },
+  {
+    "file": "spline_curves.csv",
+    "rows": 480,
+    "columns": [
+      "dataset",
+      "outcome",
+      "mbr_z",
+      "or",
+      "low",
+      "high"
+    ],
+    "sha256": "ffad09af32c893fa82c54a417a8ffe03141a9606e2c4085933ff58e13a30adc7"
+  },
+  {
+    "file": "spline_tests.csv",
+    "rows": 4,
+    "columns": [
+      "dataset",
+      "outcome",
+      "n",
+      "events",
+      "p_overall",
+      "p_nonlinear",
+      "internal_knot_10",
+      "internal_knot_50",
+      "internal_knot_90",
+      "boundary_low",
+      "boundary_high"
+    ],
+    "sha256": "7ec00f44145ff1c26a37a61f1626b354a0cf3d2ac9ad793845c50a2c160461f9"
+  },
+  {
+    "file": "threshold_performance.csv",
+    "rows": 32,
+    "columns": [
+      "dataset",
+      "outcome",
+      "score",
+      "weighted",
+      "n",
+      "events",
+      "auc",
+      "strategy",
+      "threshold",
+      "sensitivity",
+      "specificity",
+      "ppv",
+      "npv"
+    ],
+    "sha256": "1ee3015395dd3114ed428b70de93769f49138cda5c8a9a2962df64e5926f84c0"
+  },
+  {
+    "file": "weight_coverage_audit.csv",
+    "rows": 4,
+    "columns": [
+      "survey_year",
+      "records",
+      "body_composition",
+      "old_weight_positive",
+      "harmonized_weight_positive"
+    ],
+    "sha256": "a3c9fdc0d38d8eefb5c9d702e2351be973e2756778297272fd8c6d865992bf4d"
+  }
+]
