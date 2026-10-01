@@ -19,9 +19,11 @@ This repository is not a manuscript-writing repository. It does not include Word
 
 ## Study Overview
 
-![Study design](assets/study_design_distinct_20260929.png)
+![Study design](assets/study_design_journal_20261001.png)
 
-[Graphical abstract](assets/graphical_abstract_distinct_20260929.png) | [Previous study design](assets/study_design_20260929.png) | [Previous graphical abstract](assets/graphical_abstract_20260929.png) | [Earlier study overview](assets/study_overview.png)
+[Graphical abstract](assets/graphical_abstract_journal_20261001.png) | [Previous study design](assets/study_design_distinct_20260929.png) | [Previous graphical abstract](assets/graphical_abstract_distinct_20260929.png)
+
+[Earlier concise study design](assets/study_design_20260929.png) | [Earlier concise graphical abstract](assets/graphical_abstract_20260929.png) | [Earlier study overview](assets/study_overview.png)
 
 The study evaluates a body-composition ratio in a Chinese discovery sample and external datasets. The BIA-DXA comparison covers soft-tissue components only; it does not establish MBR equivalence. NHANES and KNHANES provide cross-sectional associations, while HRS, CHARLS, and SHARE provide clinical context without measuring MBR.
 
