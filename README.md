@@ -9,7 +9,7 @@ This snapshot contains the revised cross-sectional analysis and selected aggrega
 - [Release and citation instructions](RELEASE.md)
 - [Machine-readable citation](CITATION.cff)
 
-`public_data/` contains 13 reviewed aggregate tables. No participant-level records are included. The current analysis entries are `code/Publication/reanalyse.R` and `code/Publication/reanalyse_context.R`; older scripts remain for provenance. The public figures below are previews of the current editable study diagrams.
+`public_data/` contains 14 reviewed aggregate tables, including the design-denominator audit added on 2026-10-05. No participant-level records are included. The current analysis entries are `code/Publication/reanalyse.R` and `code/Publication/reanalyse_context.R`; older scripts remain for provenance. Statistical estimates are unchanged in this update. The newest study-design image is a provisional raster layout reference, not a final submission figure.
 
 Key comparisons from ten-fold internal validation: NHANES hip FRAX cross-validated R-squared was 0.162 for the MBR model and 0.194 for flexible components. KNHANES overall osteoporosis cross-validated AUC was 0.912 for MBR and 0.918 for BMC and joint components. These are outcome-specific, covariate-adjusted comparisons, not prospective clinical validation.
 
@@ -19,9 +19,13 @@ This repository is not a manuscript-writing repository. It does not include Word
 
 ## Study Overview
 
-![Study design](assets/study_design_journal_20261001.png)
+![Current study design reference](assets/study_design_reference_20261005.png)
 
-[Graphical abstract](assets/graphical_abstract_journal_20261001.png) | [Previous study design](assets/study_design_distinct_20260929.png) | [Previous graphical abstract](assets/graphical_abstract_distinct_20260929.png)
+[Design roles, sample-count definitions and AI-image provenance](assets/STUDY_DESIGN_REFERENCE.md) | [Design sample-count table](public_data/study_design_sample_counts.csv)
+
+The current reference depicts four primary analytic samples and separate clinical context across six underlying data sources. Counts distinguish reported records, eligible participants, paired participants and person-waves; there is no pooled total sample. The graphic has been accepted provisionally for layout and remains subject to editable reconstruction and submission review.
+
+[Graphical abstract](assets/graphical_abstract_journal_20261001.png) | [Previous editable-design preview](assets/study_design_journal_20261001.png) | [Previous study design](assets/study_design_distinct_20260929.png) | [Previous graphical abstract](assets/graphical_abstract_distinct_20260929.png)
 
 [Earlier concise study design](assets/study_design_20260929.png) | [Earlier concise graphical abstract](assets/graphical_abstract_20260929.png) | [Earlier study overview](assets/study_overview.png)
 
@@ -130,7 +134,7 @@ Muscle-Bone-Imbalance-Fracture-Risk/
     study_overview.png
   public_data/
     manifest.json
-    13 aggregate CSV files
+    14 aggregate CSV files
   code/
     Publication/
     NHANES/

@@ -29,6 +29,16 @@ Natural splines use three internal knots (10%, 50%, 90%) plus range boundaries, 
 
 Eight component models use the same complete cases and outcome-stratified ten-fold split, seed 20260804. Transformations for flexible models are trained within folds. Comparisons are exploratory, unweighted internal validation without cluster-aware folds or confidence intervals for performance differences. They are not independent validation of a clinical model.
 
+## Study-design denominator audit
+
+The design-count audit does not refit models or redistribute individual records. It checks the reviewed flow/bridge tables, counts eligible contextual respondents and person-waves from authorized local bundles, and verifies all nine contextual outcome-specific denominators. The Chinese discovery count is a reported value and is not independently reconstructed.
+
+```sh
+Rscript code/Publication/audit_study_design_counts.R public_data data/processed/HRS/HRS_fat_2012_2022_event_bundle.rds data/processed/CHARLS/CHARLS_2011_2020_clinical_context_bundle.rds data/processed/SHARE/share_rel9_outcomes_long_age50plus.rds outputs/design/study_design_sample_counts.csv
+```
+
+The five arguments are the public aggregate-table directory, HRS/CHARLS/SHARE input bundles, and the output CSV. The script stops if the counts differ from the reviewed reference or an existing output, rather than overwriting it.
+
 ## Warnings and limits
 
 The survey software may report singleton strata after domain restriction; the script explicitly uses the grand-mean adjustment. The script reads only the required NHANES columns and stops if they produce parsing problems; unused questionnaire fields are not parsed. Inspect warnings when adapting to different releases. Rare outcomes and flexible models may be unstable. The Chinese discovery analysis was not reconstructed from participant-level data in this release.

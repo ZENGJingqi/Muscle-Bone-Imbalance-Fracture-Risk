@@ -2,6 +2,8 @@
 
 Version 0.3.0-rc.1 was prepared on 2026-09-26 and is now maintained as a public development snapshot. The exact commit identifies the files used; no version tag, GitHub Release or archival DOI is claimed.
 
+The 2026-10-05 update adds the current provisional study-design reference, 38 aggregate denominator counts, and an executable denominator audit. Existing statistical estimates and all previous preview images remain unchanged. It does not create a release, tag or DOI, and does not publish manuscript or participant-level files.
+
 Before publication:
 
 1. Confirm software contributor names, authorship and copyright ownership. CITATION.cff currently identifies the known maintainer and is not a final paper-author list.

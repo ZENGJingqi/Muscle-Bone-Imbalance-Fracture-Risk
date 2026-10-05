@@ -40,6 +40,26 @@ def main():
     for r in context:
         assert 0<int(r['participants'])<=int(r['n']) and 0<int(r['events'])<int(r['n'])
         assert float(r['conf_low'])<float(r['estimate'])<float(r['conf_high'])
+    counts=rows('study_design_sample_counts.csv')
+    assert len(counts)==38 and all(int(r['n'])>0 for r in counts)
+    def count(dataset,sample,measure):
+        found=[int(r['n']) for r in counts if (r['dataset'],r['sample'],r['measure'])==(dataset,sample,measure)]
+        assert len(found)==1
+        return found[0]
+    assert count('Chinese BIA','Discovery','records')==152449
+    assert count('NHANES','Paired components','paired_participants')==11731
+    for r in rows('sample_flow.csv'):
+        assert count(r['dataset'],'DXA bone health','eligible_participants')==int(r['eligible'])
+        assert count(r['dataset'],r['outcome'],'complete_case_participants')==int(r['complete_cases'])
+    checked=0
+    for r in context:
+        if r['weighted']=='FALSE' and r['contrast']=='Per 10-year age increase' and not (r['dataset']=='CHARLS' and r['scope']!='2011-2020'):
+            assert count(r['dataset'],r['outcome'],'complete_case_person_waves')==int(r['n'])
+            assert count(r['dataset'],r['outcome'],'complete_case_unique_participants')==int(r['participants'])
+            assert int(r['n'])<=count(r['dataset'],'Clinical context','eligible_person_waves')
+            assert int(r['participants'])<=count(r['dataset'],'Clinical context','eligible_unique_participants')
+            checked+=1
+    assert checked==9
     for p in (ROOT/'code').rglob('*.py'):ast.parse(p.read_text('utf8'))
     for line in (ROOT/'SHA256SUMS').read_text('utf8').splitlines():
         digest,name=line.split('  ',1);p=(ROOT/name).resolve()

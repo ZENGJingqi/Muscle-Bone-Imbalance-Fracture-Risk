@@ -203,5 +203,18 @@
       "harmonized_weight_positive"
     ],
     "sha256": "a3c9fdc0d38d8eefb5c9d702e2351be973e2756778297272fd8c6d865992bf4d"
+  },
+  {
+    "file": "study_design_sample_counts.csv",
+    "rows": 38,
+    "columns": [
+      "dataset",
+      "sample",
+      "measure",
+      "n",
+      "definition",
+      "source"
+    ],
+    "sha256": "37c63dc49383b3a921955ac3137a8ea04b3ca10e377ea0c438b8446547fdded9"
   }
 ]

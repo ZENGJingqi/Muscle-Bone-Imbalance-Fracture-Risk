@@ -61,3 +61,4 @@ __pycache__/
 !/public_data/spline_tests.csv
 !/public_data/threshold_performance.csv
 !/public_data/weight_coverage_audit.csv
+!/public_data/study_design_sample_counts.csv

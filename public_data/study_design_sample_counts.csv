@@ -1,0 +1,39 @@
+dataset,sample,measure,n,definition,source
+Chinese BIA,Discovery,records,152449,Reported discovery records; not independently verified unique persons,Current manuscript discovery paragraph; original individual reconstruction unavailable
+NHANES,Paired components,paired_participants,11731,Persons counted once within each of five DXA imputations; age 8-49,bridge_pooled.csv
+NHANES,DXA bone health,eligible_participants,1592,Age 40-59 and positive lean/BMC,sample_flow.csv
+NHANES,hip_frax,complete_case_participants,1505,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+NHANES,major_frax,complete_case_participants,1505,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+NHANES,prev_fracture,complete_case_participants,1580,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+NHANES,direct_fx_any,complete_case_participants,1550,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+NHANES,self_report_osteoporosis,complete_case_participants,1581,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+KNHANES,DXA bone health,eligible_participants,9113,Age >=50 and positive harmonized LST/BMC,sample_flow.csv
+KNHANES,osteoporosis_any,complete_case_participants,7937,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+KNHANES,low_bone_mass,complete_case_participants,7937,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+KNHANES,osteoporosis_tf,complete_case_participants,8420,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+KNHANES,osteoporosis_fn,complete_case_participants,8420,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+KNHANES,osteoporosis_ls,complete_case_participants,8001,Outcome-specific complete cases used in adjusted and component comparisons,sample_flow.csv
+HRS,Clinical context,eligible_unique_participants,28462,"Age >=50, available sex; before outcome-specific complete-case restriction",Authorized HRS input; not redistributed
+HRS,Clinical context,eligible_person_waves,105869,Repeated participant-wave records; not independent persons,Authorized HRS input; not redistributed
+HRS,Fall in past 2 years,complete_case_unique_participants,17509,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+HRS,Fall in past 2 years,complete_case_person_waves,57898,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
+HRS,Fall-related injury,complete_case_unique_participants,10524,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+HRS,Fall-related injury,complete_case_person_waves,21242,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
+HRS,Reported hip fracture,complete_case_unique_participants,17513,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+HRS,Reported hip fracture,complete_case_person_waves,57958,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
+HRS,Self-reported osteoporosis,complete_case_unique_participants,28420,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+HRS,Self-reported osteoporosis,complete_case_person_waves,95656,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
+CHARLS,Clinical context,eligible_unique_participants,22563,"Age >=50, available sex; before outcome-specific complete-case restriction",Authorized CHARLS input; not redistributed
+CHARLS,Clinical context,eligible_person_waves,79051,Repeated participant-wave records; not independent persons,Authorized CHARLS input; not redistributed
+CHARLS,Recent fall,complete_case_unique_participants,22274,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+CHARLS,Recent fall,complete_case_person_waves,77777,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
+CHARLS,Reported hip fracture,complete_case_unique_participants,22277,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+CHARLS,Reported hip fracture,complete_case_person_waves,77786,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
+SHARE,Clinical context,eligible_unique_participants,156237,"Age >=50, available sex; before outcome-specific complete-case restriction",Authorized SHARE input; not redistributed
+SHARE,Clinical context,eligible_person_waves,452120,Repeated participant-wave records; not independent persons,Authorized SHARE input; not redistributed
+SHARE,Fall-related limitation,complete_case_unique_participants,155647,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+SHARE,Fall-related limitation,complete_case_person_waves,450128,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
+SHARE,Ever hip fracture,complete_case_unique_participants,155659,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+SHARE,Ever hip fracture,complete_case_person_waves,450311,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
+SHARE,Osteoporosis medication,complete_case_unique_participants,155617,Unweighted clustered-model sample; matches published aggregate table,context_clustered_associations.csv
+SHARE,Osteoporosis medication,complete_case_person_waves,449895,Unweighted clustered-model records; matches published aggregate table,context_clustered_associations.csv
