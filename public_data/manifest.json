@@ -16,7 +16,8 @@
       "p_value",
       "mbr_sd"
     ],
-    "sha256": "c989a3210567ea70177cf70e8d94af51bc4d9d1a704a170b0ec5e2ca3e76bbc4"
+    "sha256": "c989a3210567ea70177cf70e8d94af51bc4d9d1a704a170b0ec5e2ca3e76bbc4",
+    "source_version": "288cf99"
   },
   {
     "file": "bridge_per_imputation.csv",
@@ -31,7 +32,8 @@
       "variance_z",
       "design_df"
     ],
-    "sha256": "745ce4fddf5d62344b5fe1f9003453e8c0c198deaf790d60836dc9a3cc952a75"
+    "sha256": "745ce4fddf5d62344b5fe1f9003453e8c0c198deaf790d60836dc9a3cc952a75",
+    "source_version": "288cf99"
   },
   {
     "file": "bridge_pooled.csv",
@@ -47,7 +49,8 @@
       "within_variance",
       "between_variance"
     ],
-    "sha256": "55d711134cc2035e01c0922f702bc14fe64bcba36c8ba4b5df41ca3672e0aa36"
+    "sha256": "55d711134cc2035e01c0922f702bc14fe64bcba36c8ba4b5df41ca3672e0aa36",
+    "source_version": "288cf99"
   },
   {
     "file": "component_cv_performance.csv",
@@ -62,7 +65,8 @@
       "seed",
       "folds"
     ],
-    "sha256": "88f00f0310817621c0ce9f36664442b5ca3fb648cdb5187a4dd1c1901bcdba6d"
+    "sha256": "88f00f0310817621c0ce9f36664442b5ca3fb648cdb5187a4dd1c1901bcdba6d",
+    "source_version": "288cf99"
   },
   {
     "file": "context_clustered_associations.csv",
@@ -81,7 +85,8 @@
       "conf_high",
       "p_value"
     ],
-    "sha256": "708d2c10166d9ed32899ade91cec242b761097461f49d0adb391e3ad2c1aed7d"
+    "sha256": "708d2c10166d9ed32899ade91cec242b761097461f49d0adb391e3ad2c1aed7d",
+    "source_version": "288cf99"
   },
   {
     "file": "context_weight_coverage.csv",
@@ -93,7 +98,8 @@
       "participants",
       "positive_weight"
     ],
-    "sha256": "3c7b12c4722b650b594a1eacff5a7ea7961b011af1291996aa9a91c63e471db5"
+    "sha256": "3c7b12c4722b650b594a1eacff5a7ea7961b011af1291996aa9a91c63e471db5",
+    "source_version": "288cf99"
   },
   {
     "file": "KNHANES_description.csv",
@@ -108,7 +114,8 @@
       "lean_mean",
       "bmc_mean"
     ],
-    "sha256": "a538949821f246dd2b14593d132cecf533107e1be3643f856c61be263564902d"
+    "sha256": "a538949821f246dd2b14593d132cecf533107e1be3643f856c61be263564902d",
+    "source_version": "288cf99"
   },
   {
     "file": "NHANES_description.csv",
@@ -123,7 +130,8 @@
       "lean_mean",
       "bmc_mean"
     ],
-    "sha256": "e66d33113b1fcf522a3fa2a4c671ebed06ebe68b4471d114bc837fcf11c4f71f"
+    "sha256": "e66d33113b1fcf522a3fa2a4c671ebed06ebe68b4471d114bc837fcf11c4f71f",
+    "source_version": "288cf99"
   },
   {
     "file": "sample_flow.csv",
@@ -139,7 +147,8 @@
       "mbr_mean",
       "mbr_sd"
     ],
-    "sha256": "743c9fd34ed6412ce4b32b30ab9948713a04dd8885015d8b87d37fd0cd3f003b"
+    "sha256": "743c9fd34ed6412ce4b32b30ab9948713a04dd8885015d8b87d37fd0cd3f003b",
+    "source_version": "288cf99"
   },
   {
     "file": "spline_curves.csv",
@@ -152,7 +161,8 @@
       "low",
       "high"
     ],
-    "sha256": "ffad09af32c893fa82c54a417a8ffe03141a9606e2c4085933ff58e13a30adc7"
+    "sha256": "ffad09af32c893fa82c54a417a8ffe03141a9606e2c4085933ff58e13a30adc7",
+    "source_version": "288cf99"
   },
   {
     "file": "spline_tests.csv",
@@ -170,7 +180,8 @@
       "boundary_low",
       "boundary_high"
     ],
-    "sha256": "7ec00f44145ff1c26a37a61f1626b354a0cf3d2ac9ad793845c50a2c160461f9"
+    "sha256": "7ec00f44145ff1c26a37a61f1626b354a0cf3d2ac9ad793845c50a2c160461f9",
+    "source_version": "288cf99"
   },
   {
     "file": "threshold_performance.csv",
@@ -190,7 +201,8 @@
       "ppv",
       "npv"
     ],
-    "sha256": "1ee3015395dd3114ed428b70de93769f49138cda5c8a9a2962df64e5926f84c0"
+    "sha256": "1ee3015395dd3114ed428b70de93769f49138cda5c8a9a2962df64e5926f84c0",
+    "source_version": "288cf99"
   },
   {
     "file": "weight_coverage_audit.csv",
@@ -202,7 +214,8 @@
       "old_weight_positive",
       "harmonized_weight_positive"
     ],
-    "sha256": "a3c9fdc0d38d8eefb5c9d702e2351be973e2756778297272fd8c6d865992bf4d"
+    "sha256": "a3c9fdc0d38d8eefb5c9d702e2351be973e2756778297272fd8c6d865992bf4d",
+    "source_version": "288cf99"
   },
   {
     "file": "study_design_sample_counts.csv",
@@ -215,6 +228,88 @@
       "definition",
       "source"
     ],
-    "sha256": "37c63dc49383b3a921955ac3137a8ea04b3ca10e377ea0c438b8446547fdded9"
+    "sha256": "37c63dc49383b3a921955ac3137a8ea04b3ca10e377ea0c438b8446547fdded9",
+    "source_version": "288cf99"
+  },
+  {
+    "file": "validation_paired_differences.csv",
+    "rows": 70,
+    "columns": [
+      "dataset",
+      "outcome",
+      "n",
+      "events",
+      "metric",
+      "comparator",
+      "reference",
+      "delta",
+      "refit_basic_low",
+      "refit_basic_high",
+      "refit_percentile_low",
+      "refit_percentile_high",
+      "repeated_mean_delta",
+      "repeated_sd_delta",
+      "split_delta_p025",
+      "split_delta_p975",
+      "positive_repeats",
+      "negative_repeats",
+      "tied_repeats",
+      "repetitions",
+      "bootstrap_replicates"
+    ],
+    "sha256": "6df7003ddaeab016b45d8cbcc4e61ffc021b91a212714f024ce1296a9799ef6d",
+    "source_version": 65
+  },
+  {
+    "file": "validation_performance_summary.csv",
+    "rows": 80,
+    "columns": [
+      "dataset",
+      "outcome",
+      "n",
+      "events",
+      "metric",
+      "model",
+      "original",
+      "refit_basic_low",
+      "refit_basic_high",
+      "refit_percentile_low",
+      "refit_percentile_high",
+      "repeated_mean",
+      "repeated_sd",
+      "split_p025",
+      "split_p975",
+      "repetitions",
+      "bootstrap_replicates"
+    ],
+    "sha256": "3f350b01339606f1e8ee3f985d7c89bbf4d097f7f1b8790b76ceb56e4430a231",
+    "source_version": 65
+  },
+  {
+    "file": "validation_refit_bootstrap.csv",
+    "rows": 80000,
+    "columns": [
+      "dataset",
+      "outcome",
+      "model",
+      "bootstrap_id",
+      "value"
+    ],
+    "sha256": "057f35d86967d3501b0cc896a0b0e9d6ae26f5aab8a8c7fbf086e611ad24fb1b",
+    "source_version": 65
+  },
+  {
+    "file": "validation_repeated_cv.csv",
+    "rows": 8000,
+    "columns": [
+      "dataset",
+      "outcome",
+      "model",
+      "repeat_id",
+      "seed",
+      "value"
+    ],
+    "sha256": "029a90f5a777e6f36c41c0ff77ffbd222bdfe00aaaf3c5b8d01112ee09067b48",
+    "source_version": 65
   }
 ]

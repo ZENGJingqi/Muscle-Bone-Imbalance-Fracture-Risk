@@ -1,8 +1,10 @@
 # CHARLS
 
+Historical acquisition and exploratory-analysis notes. Current respondent-clustered results and denominator definitions are in public_data and REPRODUCIBILITY.md. This dataset provides clinical context without MBR.
+
 ## Role in the Project
 
-CHARLS was used as the Chinese older-adult clinical outcome context dataset. It was not used to directly validate the original Chinese `BIA-based MBR` or the original threshold. Instead, it was used to evaluate whether falls and hip fracture followed coherent age- and sex-related gradients in a Chinese aging population that are compatible with the broader clinical relevance of a muscle-bone imbalance phenotype.
+CHARLS supplies Chinese older-adult clinical context, describing endpoint-specific age and sex associations with falls and reported hip fracture. These analyses do not contain MBR and do not estimate MBR effects or validate a BIA threshold.
 
 ## Official Source
 

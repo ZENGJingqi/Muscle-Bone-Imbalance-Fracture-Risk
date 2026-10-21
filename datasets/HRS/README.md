@@ -1,5 +1,7 @@
 # HRS
 
+Historical acquisition and exploratory-analysis notes. Current respondent-clustered results and denominator definitions are in public_data and REPRODUCIBILITY.md. This dataset provides clinical context without MBR.
+
 ## Role in the Project
 
 HRS was not used to directly validate the original MBR marker. Instead, it was used to provide an older-adult clinical outcome context in a large U.S. aging population.

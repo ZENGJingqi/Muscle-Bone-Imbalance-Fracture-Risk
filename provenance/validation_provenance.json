@@ -1,0 +1,47 @@
+{
+  "upstream_development_commit": "288cf99ae2526c1253b63fe0819a327e47556738",
+  "analysis_completed_on": "2026-10-10",
+  "publication_update_prepared_on": "2026-10-21",
+  "publication_identity": "The containing Git commit identifies the distributed files; no tag, formal Release or DOI is implied.",
+  "input_checksums": [
+    {
+      "filename": "NHANES_2013_2014_outcome_bundle.csv.gz",
+      "sha256": "d37764ca0bbddd90a443d987ed57bcf1bf7a4ab4aad93c1abb16a5fc66b40b6d",
+      "bytes": 2517978
+    },
+    {
+      "filename": "KNHANES_2008_2011_ALL_DXA_merged.rds",
+      "sha256": "20eceddeeed66f6ada1bc7e9e51875a73f51b4418b64cf65769a4107f7a67ec0",
+      "bytes": 37339168
+    },
+    {
+      "filename": "component_cv_performance.csv",
+      "sha256": "88f00f0310817621c0ce9f36664442b5ca3fb648cdb5187a4dd1c1901bcdba6d",
+      "bytes": 6010
+    }
+  ],
+  "code_sha256": "63212eea9fc145ea496f22deeca42ae72a2fd7438f716b534a25c04a105ce073",
+  "aggregate_files": [
+    {
+      "filename": "validation_performance_summary.csv",
+      "sha256": "3f350b01339606f1e8ee3f985d7c89bbf4d097f7f1b8790b76ceb56e4430a231",
+      "rows": 80
+    },
+    {
+      "filename": "validation_paired_differences.csv",
+      "sha256": "6df7003ddaeab016b45d8cbcc4e61ffc021b91a212714f024ce1296a9799ef6d",
+      "rows": 70
+    },
+    {
+      "filename": "validation_repeated_cv.csv",
+      "sha256": "029a90f5a777e6f36c41c0ff77ffbd222bdfe00aaaf3c5b8d01112ee09067b48",
+      "rows": 8000
+    },
+    {
+      "filename": "validation_refit_bootstrap.csv",
+      "sha256": "057f35d86967d3501b0cc896a0b0e9d6ae26f5aab8a8c7fbf086e611ad24fb1b",
+      "rows": 80000
+    }
+  ],
+  "participant_ids_predictions_folds_and_counts_excluded": true
+}

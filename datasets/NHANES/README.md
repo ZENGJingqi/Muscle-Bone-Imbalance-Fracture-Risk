@@ -1,8 +1,10 @@
 # NHANES
 
+Historical acquisition and exploratory-analysis notes. Use the root README, REPRODUCIBILITY.md and public_data for current reviewed definitions, estimates and internal-validation uncertainty; do not substitute older numerical excerpts for current tables.
+
 ## Role in the Project
 
-NHANES provided the most important external support for the manuscript. It was used for two purposes:
+NHANES supplied selected paired soft-tissue correspondence and separate cross-sectional bone-health analyses. It was used for two purposes:
 
 1. `BIA-DXA bridge`
 2. `DXA-derived MBR` association with fracture-related risk markers

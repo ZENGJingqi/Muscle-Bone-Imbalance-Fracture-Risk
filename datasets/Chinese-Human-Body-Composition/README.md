@@ -1,8 +1,10 @@
 # Chinese Human Body Composition Dataset
 
+Historical source-access note. Current interpretation and reviewed outputs are documented in the root README and public_data; this page is not an updated numerical analysis.
+
 ## Role in the Study
 
-This dataset corresponds to the original Chinese discovery cohort used in the manuscript. It provided the initial `BIA-based MBR` signal and the original cohort-specific threshold explored in the paper.
+This source supplied the archived Chinese discovery records and initial BIA-based proportionality description. The value of 16 was an empirical distribution feature, not a validated threshold. Unique participants and device-specific algorithms were not independently reconstructed.
 
 This repository does **not** redistribute the original Chinese participant-level data.
 
@@ -22,7 +24,7 @@ License:
 This repository is mainly intended to document:
 
 1. the study context,
-2. the external datasets used for extension and validation,
+2. the separate population datasets used for association and contextual analyses,
 3. the lightweight public analysis workflow for those external datasets.
 
 Because the Chinese cohort is not redistributed here, no public participant-level data files are included in this folder.

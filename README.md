@@ -1,206 +1,72 @@
-# Muscle-Bone-Imbalance-Fracture-Risk
+# Muscle-to-bone proportionality across population datasets
 
-## Current development snapshot: 0.3.0-rc.1
+Analysis code and non-identifying aggregate results for **Muscle-to-bone mass ratio as a candidate proportional phenotype across population datasets**.
 
-This snapshot contains the revised cross-sectional analysis and selected aggregate outputs. MBR is evaluated as a candidate proportional descriptor. The NHANES 1999-2004 bridge now analyzes the five DXA imputations separately and pools estimates using Rubin rules. A public Git commit is a development snapshot; no clinical validation or archived DOI is implied.
+## Current development snapshot
 
-- [Reproduction instructions and known issues](REPRODUCIBILITY.md)
-- [Aggregate results and data dictionary](public_data/README.md)
-- [Release and citation instructions](RELEASE.md)
-- [Machine-readable citation](CITATION.cff)
+The 21 October 2026 update adds the reviewed internal-validation extension: 100 additional shared ten-fold allocations and 1000 paired participant-level bootstrap resamples with model refitting. The repository now contains **18 aggregate CSV tables** and four canonical R analysis entry points. The original 14 aggregate tables and original model point estimates are unchanged.
 
-`public_data/` contains 14 reviewed aggregate tables, including the design-denominator audit added on 2026-10-05. No participant-level records are included. The current analysis entries are `code/Publication/reanalyse.R` and `code/Publication/reanalyse_context.R`; older scripts remain for provenance. Statistical estimates are unchanged in this update. The newest study-design image is a provisional raster layout reference, not a final submission figure.
+Cite the exact Git commit used. The version label `0.3.1-dev` is descriptive metadata, not a Git tag, formal Release or archival DOI.
 
-Key comparisons from ten-fold internal validation: NHANES hip FRAX cross-validated R-squared was 0.162 for the MBR model and 0.194 for flexible components. KNHANES overall osteoporosis cross-validated AUC was 0.912 for MBR and 0.918 for BMC and joint components. These are outcome-specific, covariate-adjusted comparisons, not prospective clinical validation.
+- [Reproduction instructions](REPRODUCIBILITY.md)
+- [Aggregate data dictionary and checksums](public_data/README.md)
+- [Citation and release status](RELEASE.md)
+- [Machine-readable software citation](CITATION.cff)
+- [Current study design PDF](assets/study_design_current.pdf) and [dataset-role definitions](assets/STUDY_DESIGN_REFERENCE.md)
 
-This repository documents the public reproducibility workflow for a study on a muscle-bone imbalance phenotype associated with fracture-related and osteoporosis-related burden. It provides dataset access routes, downloaded external file records, preprocessing logic, and modeling scripts for the external analyses.
+## Scientific contribution
 
-This repository is not a manuscript-writing repository. It does not include Word/PDF generation scripts, submission files, drafting notes, or local manuscript assembly code.
+Complementary datasets characterize a candidate, platform-dependent proportional phenotype and its bone-health associations. Same-sample comparisons evaluate the information retained by the ratio relative to its numerator, denominator and joint component representations. This is not development or external validation of a clinical fracture prediction rule.
 
-## Study Overview
+| Data source | Analytical role |
+| --- | --- |
+| Chinese BIA records | Age- and sex-specific descriptive proportionality; archived outputs, without clinical bone outcomes |
+| NHANES 1999-2004 | Paired BIA/DXA correspondence for selected soft-tissue components, accounting for five DXA imputations |
+| NHANES 2013-2014 | Cross-sectional associations with BMD-informed FRAX probabilities and reported bone-health indicators; within-sample component comparisons |
+| KNHANES 2008-2011 | Cross-sectional associations with DXA-defined bone status; within-sample component comparisons |
+| HRS 2012-2022 | Separate age- and sex-related clinical context, without MBR |
+| CHARLS 2011-2020 | Separate clinical context and a recent-wave comparison, without MBR |
+| SHARE release 9 | Separate clinical context, without MBR |
 
-![Current study design reference](assets/study_design_reference_20261005.png)
+Participants are not linked or pooled across sources. Different roles and endpoints are complementary evidence, not interchangeable replications of one outcome. Record counts, people and person-waves must not be added into a pooled sample size.
 
-[Design roles, sample-count definitions and AI-image provenance](assets/STUDY_DESIGN_REFERENCE.md) | [Design sample-count table](public_data/study_design_sample_counts.csv)
+DXA MBR equals lean soft tissue excluding BMC divided by BMC. BIA muscle mass, fat-free mass and DXA lean soft tissue are not identical compartments. The paired NHANES comparison does not calibrate the BIA bone estimate, the complete BIA ratio or Chinese device algorithms. The Chinese value of 16 is an empirical distribution feature, not a diagnostic cutoff.
 
-The current reference depicts four primary analytic samples and separate clinical context across six underlying data sources. Counts distinguish reported records, eligible participants, paired participants and person-waves; there is no pooled total sample. The graphic has been accepted provisionally for layout and remains subject to editable reconstruction and submission review.
+## Main numerical interpretation
 
-[Graphical abstract](assets/graphical_abstract_journal_20261001.png) | [Previous editable-design preview](assets/study_design_journal_20261001.png) | [Previous study design](assets/study_design_distinct_20260929.png) | [Previous graphical abstract](assets/graphical_abstract_distinct_20260929.png)
+For KNHANES overall osteoporosis, covariates-only and covariates-plus-MBR cross-validated AUCs were 0.853 and 0.912; BMC and raw joint-component models both rounded to 0.918. The BMC-minus-MBR difference was 0.006 (approximate 95% basic interval 0.003 to 0.009), with positive differences in all 100 additional allocations.
 
-[Earlier concise study design](assets/study_design_20260929.png) | [Earlier concise graphical abstract](assets/graphical_abstract_20260929.png) | [Earlier study overview](assets/study_overview.png)
+For NHANES hip FRAX, MBR and flexible-component R-squared values were 0.162 and 0.194. The flexible-minus-MBR difference was 0.032 (approximate 95% basic interval -0.021 to 0.118), despite positive differences in all additional allocations. Fold stability is not sampling certainty. Neither MBR nor BMC was uniformly favored across endpoints; no consistent ratio advantage, equivalence or clinical benefit is claimed.
 
-The study evaluates a body-composition ratio in a Chinese discovery sample and external datasets. The BIA-DXA comparison covers soft-tissue components only; it does not establish MBR equivalence. NHANES and KNHANES provide cross-sectional associations, while HRS, CHARLS, and SHARE provide clinical context without measuring MBR.
+These are complete models containing common covariates, not performance attributable to MBR alone. FRAX probabilities incorporate BMD and are not observed incident fractures. No prospective fragility-fracture prediction, clinical calibration, decision benefit or increment over an established BMD/FRAX clinical model was tested.
 
-## How to Use This Repository
+## Canonical analysis entry points
 
-This repository is structured around the manuscript rather than around a software package.
+| File | Purpose |
+| --- | --- |
+| `code/Publication/reanalyse.R` | Original bridge/DXA association, component, spline and operating-characteristic analyses |
+| `code/Publication/reanalyse_context.R` | Separate respondent-clustered HRS/CHARLS/SHARE contextual analyses |
+| `code/Publication/audit_study_design_counts.R` | Audit of sample-role and outcome-specific denominators |
+| `code/Publication/extend_model_validation.R` | Repeated ten-fold allocations and paired refitting-bootstrap uncertainty |
 
-Recommended reading order:
-
-1. Start with the current `README.md` for the study rationale and dataset roles.
-2. Open `datasets/Chinese-Human-Body-Composition/README.md` for the discovery cohort access note.
-3. Open `datasets/NHANES`, `datasets/KNHANES`, `datasets/HRS`, `datasets/CHARLS`, and `datasets/SHARE` for dataset-specific scope, data-source URLs, preprocessing notes, and concise findings.
-4. See `REPRODUCIBILITY.md` for the current analysis commands. The scripts require authorized local access to source datasets.
-
-## Study Scope
-
-The manuscript combines:
-
-- one original Chinese discovery dataset
-- five external datasets with distinct association or contextual roles:
-  - `NHANES`
-  - `KNHANES`
-  - `HRS`
-  - `CHARLS`
-  - `SHARE`
-
-The original Chinese value of 16 is an empirical distribution feature, not a clinical cutoff. The analyses address these five questions:
-
-1. Can BIA-derived body composition be bridged to DXA-derived body composition?
-2. Does a DXA-derived muscle-to-bone ratio show structural and risk consistency in external populations?
-3. Do U.S. older-adult clinical outcomes show a compatible age- and sex-related context?
-4. Do Chinese older-adult clinical outcomes show a compatible age- and sex-related context?
-5. Do European older-adult clinical outcomes show a compatible age- and sex-related context?
-
-## Chinese Discovery Dataset
-
-The original Chinese dataset is not redistributed in this repository.
-
-### Availability of Data and Material
-
-The **"Human Body Composition Dataset for the Chinese Population"** can be accessed through the National Population Health Data Center:
-
-- main portal: <https://www.ncmi.cn/>
-- direct dataset page: <https://www.ncmi.cn//phda/dataDetails.do?id=CSTR:A0006.11.A0005.201905.000346>
-
-Access and reuse conditions must be checked with the provider. This repository does not grant rights to redistribute that dataset.
-
-This repository instead focuses on the external datasets and the associated reproducible workflow.
-
-## External Datasets
-
-### NHANES
-
-- role: `BIA-DXA bridge` and `DXA-derived MBR` risk consistency
-- range used: `1999-2004` and `2013-2014`
-- official source: <https://wwwn.cdc.gov/nchs/nhanes/>
-
-### KNHANES
-
-- role: `East Asian DXA structural-consistency analysis`
-- range used: `2008-2011`
-- official source: <https://knhanes.kdca.go.kr/knhanes/eng/index.do>
-
-### HRS
-
-- role: `U.S. older-adult clinical outcome context`
-- range used: `RAND HRS Fat Files 2012-2022`
-- official source: <https://hrsdata.isr.umich.edu/data-products>
-
-### CHARLS
-
-- role: `Chinese older-adult clinical outcome context`
-- range used: `2011, 2013, 2015, 2018, 2020 main waves` plus `Harmonized CHARLS`
-- official source: <https://charls.charlsdata.com/>
-
-### SHARE
-
-- role: `European older-adult clinical outcome context`
-- range used: `Gateway Harmonized SHARE Release 9.0.0, 2004-2022`
-- official source: <https://releases.sharedataportal.eu/>
-
-## Reproducibility Map
-
-| Question | Dataset | Main Folder |
-| --- | --- | --- |
-| Original discovery signal | Chinese Human Body Composition Dataset | `datasets/Chinese-Human-Body-Composition` |
-| BIA-to-DXA bridge and DXA-based risk consistency | `NHANES` | `datasets/NHANES` and `code/NHANES` |
-| East Asian DXA structural consistency | `KNHANES` | `datasets/KNHANES` and `code/KNHANES` |
-| U.S. older-adult clinical outcome context | `HRS` | `datasets/HRS` and `code/HRS` |
-| Chinese older-adult clinical outcome context | `CHARLS` | `datasets/CHARLS` and `code/CHARLS` |
-| European older-adult clinical outcome context | `SHARE` | `datasets/SHARE` and `code/SHARE` |
-| Survey-weighted, RCS, and threshold-performance sensitivity analyses | `NHANES` and `KNHANES` | `code/Sensitivity` |
-| Revised main and context analyses | `NHANES`, `KNHANES`, `HRS`, `CHARLS`, `SHARE` | `code/Publication` |
-
-## Repository Structure
+The entry points require authorized, already-cleaned inputs. Source acquisition and older preparation scripts remain for provenance; this update does not claim a fresh execution of the full raw-to-clean processing chain or a participant-level reconstruction of the Chinese discovery analysis. Older scripts and images are historical references, not the current manuscript's figures or numerical specification.
 
 ```text
-Muscle-Bone-Imbalance-Fracture-Risk/
-  README.md
-  .gitignore
-  assets/
-    study_design_20260929.png
-    graphical_abstract_20260929.png
-    study_overview.png
-  public_data/
-    manifest.json
-    14 aggregate CSV files
-  code/
-    Publication/
-    NHANES/
-    KNHANES/
-    HRS/
-    CHARLS/
-    Sensitivity/
-  datasets/
-    Chinese-Human-Body-Composition/
-      README.md
-    NHANES/
-      README.md
-    KNHANES/
-      README.md
-    HRS/
-      README.md
-    CHARLS/
-      README.md
-    SHARE/
-      README.md
-    TEMPLATE_NEW_DATASET.md
+python code/check_public_release.py
 ```
 
-## Current Interpretation
+This standard-library check verifies aggregate schemas, counts and hashes, selected numerical relationships, validation-summary consistency and the public checksum manifest. It does not refit models.
 
-- Original Chinese cohort: `BIA-based MBR`
-- NHANES / KNHANES: `DXA-derived MBR`
-- HRS / CHARLS / SHARE: `older-adult clinical outcome context`
-- Overall concept: `muscle-bone imbalance phenotype`
+## Data access and privacy
 
-MBR is a candidate, platform-dependent proportional descriptor. It does not consistently outperform BMC or joint component models. These data do not establish prospective fracture prediction, causal tissue crosstalk, or clinical utility. The empirical Chinese value of 16 has no outcome-based validation.
+No raw or cleaned participant records, identifiers, individual outcomes/predictions, fold assignments, resampling frequencies or checkpoints are distributed. Bootstrap iteration performance metrics are model-level aggregates, not participant observations. Do not upload the `private/` directory generated by the validation program.
 
-## Data Availability
+Obtain underlying data through the source providers and comply with their conditions:
+[Chinese discovery data](https://www.ncmi.cn/phda/dataDetails.do?id=CSTR:A0006.11.A0005.201905.000346),
+[NHANES](https://wwwn.cdc.gov/nchs/nhanes/),
+[KNHANES](https://knhanes.kdca.go.kr/knhanes/eng/index.do),
+[HRS](https://hrsdata.isr.umich.edu/data-products),
+[CHARLS](https://charls.charlsdata.com/), and
+[SHARE](https://releases.sharedataportal.eu/).
 
-This repository does **not** include Chinese or external participant-level data, raw survey files, or large local result bundles. Selected aggregate tables are supplied in `public_data/` with file hashes and a dictionary. These tables support result inspection but cannot replace the original data for model refitting.
-
-Reasons:
-
-- some datasets require registration or application
-- large files are not appropriate for a lightweight GitHub methods repository
-- the purpose here is to document dataset access, preprocessing logic, analysis design, and key findings
-
-## What This Repository Provides
-
-- dataset-specific notes for the Chinese cohort and the five external datasets
-- official dataset source URLs and the exact survey ranges used
-- downloaded file names, formats, and locally checked version notes for the external datasets
-- lightweight public code for NHANES, KNHANES, HRS, CHARLS, SHARE, and sensitivity analyses
-- a template for adding future datasets
-
-## Public Analysis Code
-
-The public code in this repository is limited to the external datasets:
-
-- `code/NHANES`
-- `code/KNHANES`
-- `code/HRS`
-- `code/CHARLS`
-- `code/SHARE`
-- `code/Sensitivity`
-- `code/Publication` (current main and clinical-context analyses)
-
-No public participant-level code or data release is provided here for the original Chinese discovery cohort.
-
-The public code is limited to reproducible data cleaning, variable derivation, and statistical modeling. Scripts used only to draft manuscript text, assemble Word documents, polish submission files, or manage local working notes are intentionally excluded.
-
-## Citation
-
-Use `CITATION.cff` for the software snapshot and cite each source survey separately. The candidate has no minted DOI or published release. After the reviewed version is released and archived, cite its version-specific DOI as described in `RELEASE.md`; do not substitute the preprint DOI for a software DOI.
+Packaging does not grant a software license or transfer source-data redistribution rights. The known maintainer in CITATION.cff is not a confirmed manuscript author list. This repository contains no manuscript Word files, submission correspondence or author/ethics documents.

@@ -1,5 +1,7 @@
 # SHARE
 
+Historical acquisition and exploratory-analysis notes. Current respondent-clustered results and denominator definitions are in public_data and REPRODUCIBILITY.md. This dataset provides clinical context without MBR.
+
 ## Role in the Project
 
 SHARE was used as the European older-adult clinical outcome context dataset. It was not used to directly validate the original Chinese `BIA-based MBR`, because SHARE does not provide the BIA or DXA body-composition variables required to construct MBR.

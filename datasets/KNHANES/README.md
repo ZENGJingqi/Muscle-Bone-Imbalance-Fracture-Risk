@@ -1,8 +1,10 @@
 # KNHANES
 
+Historical acquisition and exploratory-analysis notes. Use the root README, REPRODUCIBILITY.md and public_data for current reviewed definitions, estimates and internal-validation uncertainty; do not substitute older numerical excerpts for current tables.
+
 ## Role in the Project
 
-KNHANES was used as an East Asian DXA structural-consistency dataset. Its value was not in replicating the original Chinese BIA-based marker directly, but in testing whether a conceptually corresponding DXA-derived marker showed consistent associations with osteoporosis-related outcomes.
+KNHANES supplies cross-sectional associations with DXA-defined bone status and same-sample ratio-component comparisons in a separate population setting. It is not direct replication of a Chinese BIA threshold or prospective fracture validation.
 
 ## Official Source
 

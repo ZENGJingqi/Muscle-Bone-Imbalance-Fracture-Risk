@@ -1,6 +1,6 @@
-# Current study design reference (2026-10-05)
+# Current study design
 
-The current PNG is an AI-generated raster layout reference, accepted provisionally for its design direction. It is not an editable or final submission figure, and no new statistical results are implied. Previous previews remain unchanged. The survey populations are analyzed separately, not linked or pooled.
+The [current PDF](study_design_current.pdf) was exported from the retained native PowerPoint diagram used in the current manuscript. OpenAI Codex assisted with layout; analytical roles and counts came from documented study sources. Generic icons do not depict actual devices, scans or participants. Earlier AI-generated PNGs remain historical layout previews and are not the current figure. The survey populations are analyzed separately, not linked or pooled.
 
 | Analytic sample | Design count | Role |
 | --- | --- | --- |
@@ -18,4 +18,4 @@ DXA MBR uses lean soft tissue excluding BMC divided by BMC; lean soft tissue is 
 
 The [sample-count table](../public_data/study_design_sample_counts.csv) also lists outcome-specific denominators. The [audit script](../code/Publication/audit_study_design_counts.R) reproduces the external contextual counts from authorized local bundles and checks them against the published aggregate tables. The Chinese count remains a reported input rather than an independent reconstruction.
 
-Generated with OpenAI image generation from the project's preceding design reference; human review checked the displayed counts and roles. The illustration uses generic conceptual and measurement symbols, not actual scans or specific devices. Editable reconstruction and journal-specific review remain necessary before submission.
+The PDF contains no statistical results, diagnostic cutoffs or pooled total sample. Native construction does not itself establish journal-policy compliance; the manuscript retains the AI-assistance disclosure for author review.

@@ -27,7 +27,7 @@ NHANES 1999-2004 survey weighting uses 2/3 WTMEC4YR for 1999-2002 and 1/3 WTMEC2
 
 Natural splines use three internal knots (10%, 50%, 90%) plus range boundaries, giving four exposure degrees of freedom. Nonlinearity is tested on three explicitly constructed nonlinear contrasts after projecting the basis on the intercept and linear exposure. Weighted AUC uses pairwise concordance with half credit for ties, not an unweighted ROC coupled to weighted sensitivities.
 
-Eight component models use the same complete cases and outcome-stratified ten-fold split, seed 20260804. Transformations for flexible models are trained within folds. Comparisons are exploratory, unweighted internal validation without cluster-aware folds or confidence intervals for performance differences. They are not independent validation of a clinical model.
+Eight component models use the same complete cases and shared ten-fold split, seed 20260804. Binary-outcome splits are event-stratified; FRAX splits are random. Transformations for flexible models are trained within folds. Comparisons are exploratory and unweighted. The extension below adds conditional performance-difference intervals and repeated allocations; it does not add survey-cluster or geographically external validation.
 
 ## Study-design denominator audit
 
@@ -56,3 +56,19 @@ The weight folder must contain one weight.dta/Weights.dta per year in subdirecto
 Models adjust for age per ten years, sex and categorical wave; SHARE also adjusts for country. Both unweighted and response-weighted models cluster observations by respondent. Positive available response/individual weights are required only for weighted models. CHARLS eleven-character IDs are normalized before joining 2011 weights. These are sensitivity analyses, not full complex-survey design estimates. None of the context datasets measures MBR. Unique respondents, respondent-wave observations and events are reported separately.
 
 Official sources: [DXA imputation guidance](https://wwwn.cdc.gov/nchs/nhanes/dxa/dxafaq.aspx), [NHANES weights](https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx), [whole-body variable definitions](https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2013/DataFiles/DXX_H.htm), [KNHANES](https://knhanes.kdca.go.kr/knhanes/eng/index.do), [HRS](https://hrsdata.isr.umich.edu/data-products), [CHARLS](https://charls.charlsdata.com/), [SHARE](https://releases.sharedataportal.eu/).
+
+## Repeated allocations and paired refitting bootstrap
+
+The reviewed extension requires R 4.5.1 with readr, dplyr, jsonlite and pROC. Package versions are recorded in `environment/sessionInfo_validation.txt`. It uses up to six PSOCK workers and sets the Windows UTF-8 Chinese locale for source paths and workers.
+
+```text
+Rscript --vanilla code/Publication/extend_model_validation.R . outputs/validation run data/processed/NHANES/NHANES_2013_2014_outcome_bundle.csv.gz data/processed/KNHANES/KNHANES_2008_2011_ALL_DXA_merged.rds public_data/component_cv_performance.csv
+```
+
+Arguments are repository root, a new local output directory, mode, authorized NHANES outcome bundle, authorized KNHANES bundle and the original 80-row performance reference. The program reproduces the original participant-level predictions and scores before extension. `run` uses 100 new shared ten-fold allocations and 1000 paired participant bootstrap resamples; `pilot` uses two of each and is not a publication result. `summarize` aggregates completed outcome checkpoints.
+
+All models share outcome-specific samples, folds and resampled participants. Spline knots and boundaries are estimated only in training copies. All copies of one participant remain in that participant's original fold, preventing copy leakage across training and testing. Binary resampling preserves the observed event count. Primary basic intervals equal twice the original difference minus the reversed bootstrap percentiles; percentile intervals are sensitivity results.
+
+Differences are alternative model minus MBR. The intervals are approximate, unweighted, conditional on original folds and binary event proportions, and not multiplicity-adjusted; survey PSUs are not resampled. Repeated split ranges and counts of positive differences are not confidence intervals, P values or probabilities of superiority. These analyses do not test calibration, decision benefit or an increment over an established BMD/FRAX clinical model.
+
+The script creates `private/` with participant IDs, outcomes, predictions, folds and resampling frequencies, plus checkpoint RDS files. Never upload these artifacts or individual inputs. Only the four reviewed model-level CSVs listed in `public_data/manifest.json` are distributed. Input hashes and output provenance are recorded in `provenance/validation_provenance.json`.

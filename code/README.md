@@ -40,6 +40,8 @@ Muscle-Bone-Imbalance-Fracture-Risk/
 
 - `Publication/reanalyse.R`: NHANES bridge, NHANES and KNHANES associations, survey sensitivity, and component comparisons
 - `Publication/reanalyse_context.R`: respondent-clustered HRS, CHARLS, and SHARE context models
+- `Publication/audit_study_design_counts.R`: design-role and outcome-specific denominator audit
+- `Publication/extend_model_validation.R`: repeated ten-fold allocations and paired refitting-bootstrap uncertainty; keep private outputs off GitHub
 
 Use the input contracts and commands in the repository-root `REPRODUCIBILITY.md`. The dataset-specific scripts below are retained for source preparation or historical analyses.
 

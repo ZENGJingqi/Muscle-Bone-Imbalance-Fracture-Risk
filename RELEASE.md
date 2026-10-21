@@ -1,15 +1,15 @@
-# Release status
+# Snapshot and citation status
 
-Version 0.3.0-rc.1 was prepared on 2026-09-26 and is now maintained as a public development snapshot. The exact commit identifies the files used; no version tag, GitHub Release or archival DOI is claimed.
+The 21 October 2026 update uses metadata version `0.3.1-dev`. It is a Git development snapshot, not a tagged version, formal GitHub Release or archived DOI.
 
-The 2026-10-05 update adds the current provisional study-design reference, 38 aggregate denominator counts, and an executable denominator audit. Existing statistical estimates and all previous preview images remain unchanged. It does not create a release, tag or DOI, and does not publish manuscript or participant-level files.
+It adds the reviewed validation code, four aggregate validation tables, statistical environment and provenance. Together with the unchanged original outputs, `public_data/` contains 18 CSVs. The updated study-design PDF matches the retained native figure; earlier PNGs are historical previews. Manuscripts and participant-level data are not published here.
 
-Before publication:
+## Citation
 
-1. Confirm software contributor names, authorship and copyright ownership. CITATION.cff currently identifies the known maintainer and is not a final paper-author list.
-2. Choose a software license with the rights holders. No license is invented here, and source-data access rights are not transferred by this repository.
-3. Review data-provider conditions and required acknowledgments for the final paper. This repository contains aggregate outputs, with participant-level data and individual predictions excluded.
-4. Review the updated manuscript and confirm ethics, funding and competing-interest statements.
-5. Commit the reviewed package, create an immutable versioned release, archive it with a DOI if desired, and replace the manuscript's release-candidate wording with the verified citation.
+In the manuscript, cite the exact containing commit rather than the moving `main` branch. Record its full SHA and access date. The reference should identify this as analysis code and aggregate results in a GitHub development snapshot; do not describe it as a journal article or assign a DOI that does not exist. CITATION.cff identifies the known maintainer, not a confirmed manuscript author list.
 
-Do not mix 0.2.0-rc.1 threshold, spline or component-definition outputs with this revision. Historical scripts remain in the repository for provenance; use the current entries in `code/Publication` for the reviewed analysis.
+The previous source snapshot was commit `288cf99ae2526c1253b63fe0819a327e47556738`. Original statistical estimates and 14 aggregate CSVs remain byte-identical. The new code and four CSVs retain the reviewed October 10 extension bytes.
+
+## Before a future formal release
+
+Confirm contributor names, rights and any software license with the authors and rights holders. Source-data access terms remain with the original providers. A formal Release, tag or DOI requires a separate action; none is implied by this update. Do not mix legacy component definitions or older threshold results with the canonical `code/Publication` entries.

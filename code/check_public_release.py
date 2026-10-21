@@ -5,10 +5,73 @@ import csv
 import hashlib
 import json
 import math
+import statistics
+from collections import defaultdict
 
 ROOT=Path(__file__).resolve().parents[1]
 def rows(name):
     with (ROOT/'public_data'/name).open(encoding='utf8',newline='') as f:return list(csv.DictReader(f))
+
+def quantile(values, probability):
+    values=sorted(values)
+    index=(len(values)-1)*probability
+    low=math.floor(index)
+    high=math.ceil(index)
+    return values[low]+(values[high]-values[low])*(index-low)
+
+def close(a,b):
+    assert math.isclose(float(a),float(b),rel_tol=1e-9,abs_tol=1e-11),(a,b)
+
+def check_validation(performance):
+    key=lambda r:(r['dataset'],r['outcome'],r['model'])
+    original={key(r):float(r['value']) for r in performance}
+    repeated=rows('validation_repeated_cv.csv')
+    bootstrap=rows('validation_refit_bootstrap.csv')
+    summary=rows('validation_performance_summary.csv')
+    differences=rows('validation_paired_differences.csv')
+    assert (len(repeated),len(bootstrap),len(summary),len(differences))==(8000,80000,80,70)
+    rep,boot=defaultdict(dict),defaultdict(dict)
+    for r in repeated:
+        i=int(r['repeat_id'])
+        assert int(r['seed'])==20261010+i and i not in rep[key(r)]
+        rep[key(r)][i]=float(r['value'])
+    for r in bootstrap:
+        i=int(r['bootstrap_id'])
+        assert i not in boot[key(r)]
+        boot[key(r)][i]=float(r['value'])
+    assert set(rep)==set(boot)==set(original)
+    for r in summary:
+        k=key(r)
+        assert set(rep[k])==set(range(1,101)) and set(boot[k])==set(range(1,1001))
+        rv,bv=list(rep[k].values()),list(boot[k].values())
+        close(r['original'],original[k])
+        close(r['repeated_mean'],statistics.mean(rv))
+        close(r['repeated_sd'],statistics.stdev(rv))
+        close(r['split_p025'],quantile(rv,.025))
+        close(r['split_p975'],quantile(rv,.975))
+        close(r['refit_basic_low'],2*original[k]-quantile(bv,.975))
+        close(r['refit_basic_high'],2*original[k]-quantile(bv,.025))
+        close(r['refit_percentile_low'],quantile(bv,.025))
+        close(r['refit_percentile_high'],quantile(bv,.975))
+    for r in differences:
+        k=(r['dataset'],r['outcome'],r['comparator'])
+        ref=(r['dataset'],r['outcome'],'mbr')
+        assert r['reference']=='mbr' and int(r['repetitions'])==100 and int(r['bootstrap_replicates'])==1000
+        delta=original[k]-original[ref]
+        rv=[rep[k][i]-rep[ref][i] for i in range(1,101)]
+        bv=[boot[k][i]-boot[ref][i] for i in range(1,1001)]
+        close(r['delta'],delta)
+        close(r['repeated_mean_delta'],statistics.mean(rv))
+        close(r['repeated_sd_delta'],statistics.stdev(rv))
+        close(r['split_delta_p025'],quantile(rv,.025))
+        close(r['split_delta_p975'],quantile(rv,.975))
+        close(r['refit_basic_low'],2*delta-quantile(bv,.975))
+        close(r['refit_basic_high'],2*delta-quantile(bv,.025))
+        close(r['refit_percentile_low'],quantile(bv,.025))
+        close(r['refit_percentile_high'],quantile(bv,.975))
+        assert int(r['positive_repeats'])==sum(x>0 for x in rv)
+        assert int(r['negative_repeats'])==sum(x<0 for x in rv)
+        assert int(r['tied_repeats'])==sum(x==0 for x in rv)
 
 def main():
     manifest=json.loads((ROOT/'public_data/manifest.json').read_text('utf8'))
@@ -25,6 +88,7 @@ def main():
     for r in perf:
         assert int(r['folds'])==10
         if r['metric']=='CV AUC':assert 0<=float(r['value'])<=1
+    check_validation(perf)
     for r in rows('bridge_pooled.csv'):
         assert int(r['n'])==11731 and int(r['imputations'])==5
         assert float(r['conf_low'])<float(r['r'])<float(r['conf_high'])
