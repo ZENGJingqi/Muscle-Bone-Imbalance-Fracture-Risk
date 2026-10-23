@@ -4,6 +4,8 @@
 
 Tested with R 4.5.1. Package versions are recorded in `sessionInfo.txt`. Required R packages: readr, dplyr, tidyr, survey, mitools, ggplot2 and pROC; splines is supplied with R. An optional `MBR_R_LIB` environment variable adds a user-managed R library; it is not needed when packages are normally installed.
 
+The 23 October 2026 submission sync preserves the reviewed analysis code and all 18 aggregate CSVs without changes. The standard-library regression check was rerun, including aggregation of all repeated-allocation and refitting-bootstrap metrics. This verifies retained outputs; it does not constitute fresh statistical fitting or a new execution of the complete raw-data preprocessing chain. See `provenance/submission_sync_20261023.json` for exact hashes.
+
 From the repository root:
 
 ```sh
@@ -42,6 +44,8 @@ The five arguments are the public aggregate-table directory, HRS/CHARLS/SHARE in
 ## Warnings and limits
 
 The survey software may report singleton strata after domain restriction; the script explicitly uses the grand-mean adjustment. The script reads only the required NHANES columns and stops if they produce parsing problems; unused questionnaire fields are not parsed. Inspect warnings when adapting to different releases. Rare outcomes and flexible models may be unstable. The Chinese discovery analysis was not reconstructed from participant-level data in this release.
+
+Historical Chinese component percentage differences concern older-adult subgroups, not all 152449 reported records. Their subgroup denominators and exact inclusion boundary around age 50 were not recoverable. The overall age-at-least-50 count, 27327/152449 (17.9%), does not supply the missing subgroup denominators. No device-specific agreement, clinical validation or universal threshold is inferred from these reports.
 
 ## Clinical-context reanalysis
 

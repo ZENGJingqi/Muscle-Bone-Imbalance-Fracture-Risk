@@ -2,6 +2,8 @@
 
 The [current PDF](study_design_current.pdf) was exported from the retained native PowerPoint diagram used in the current manuscript. OpenAI Codex assisted with layout; analytical roles and counts came from documented study sources. Generic icons do not depict actual devices, scans or participants. Earlier AI-generated PNGs remain historical layout previews and are not the current figure. The survey populations are analyzed separately, not linked or pooled.
 
+Synchronized on 23 October 2026 to the frozen submission Figure 1: near-white module fills, thin borders, and the explicit label "FRAX / prior fracture". Only the public diagram asset and documentation changed; its sample counts and the analysis code/data did not. The exact PDF hash is recorded in `provenance/submission_sync_20261023.json`.
+
 | Analytic sample | Design count | Role |
 | --- | --- | --- |
 | Chinese BIA | 152,449 reported records | Discovery and age/sex distribution; not independently reconstructed unique persons |

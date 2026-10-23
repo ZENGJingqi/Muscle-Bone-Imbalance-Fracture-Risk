@@ -6,6 +6,8 @@ Historical source-access note. Current interpretation and reviewed outputs are d
 
 This source supplied the archived Chinese discovery records and initial BIA-based proportionality description. The value of 16 was an empirical distribution feature, not a validated threshold. Unique participants and device-specific algorithms were not independently reconstructed.
 
+The reported total was 152449 records, including 27327 aged at least 50 years (17.9%). Historical component percentage differences were described for older-adult subgroups, not the entire discovery sample. Their exact age boundary and subgroup denominators could not be recovered. These percentages cannot be independently recalculated from participant-level data in this repository.
+
 This repository does **not** redistribute the original Chinese participant-level data.
 
 ## Availability of Data and Material
@@ -15,9 +17,7 @@ The **"Human Body Composition Dataset for the Chinese Population"** can be acces
 - main portal: <https://www.ncmi.cn/>
 - dataset page: <https://www.ncmi.cn//phda/dataDetails.do?id=CSTR:A0006.11.A0005.201905.000346>
 
-License:
-
-- `Creative Commons - Attribution 4.0 International`
+Access and licensing conditions must be confirmed with the source provider. The earlier unverified CC BY statement is not relied on as authorization to redistribute these records. This repository does not grant a source-data license or establish an ethics exemption.
 
 ## Important Note
 
@@ -31,10 +31,10 @@ Because the Chinese cohort is not redistributed here, no public participant-leve
 
 ## Interpretation
 
-The original Chinese dataset supports the discovery-stage `BIA-based MBR` finding. The external datasets in this repository were used to evaluate:
+The archived Chinese summaries supply descriptive discovery context. Other datasets in this repository address distinct questions:
 
-- cross-platform bridge,
-- external DXA consistency,
-- older-adult clinical outcome context.
+- selected soft-tissue correspondence in paired NHANES BIA/DXA measurements, not calibration of the BIA bone estimate or complete ratio;
+- cross-population DXA bone-health associations and same-sample ratio/component comparisons;
+- separate older-adult clinical context in HRS, CHARLS and SHARE, which have no MBR measurements.
 
-Therefore, the original Chinese cutoff should be interpreted as a cohort-specific discovery threshold rather than a universally transferable screening cutoff.
+The value of 16 therefore remains an empirical feature of the reported BIA distribution, not an outcome-validated or transferable screening cutoff.

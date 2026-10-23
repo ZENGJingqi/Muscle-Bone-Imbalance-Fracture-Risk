@@ -4,9 +4,9 @@ Analysis code and non-identifying aggregate results for **Muscle-to-bone mass ra
 
 ## Current development snapshot
 
-The 21 October 2026 update adds the reviewed internal-validation extension: 100 additional shared ten-fold allocations and 1000 paired participant-level bootstrap resamples with model refitting. The repository now contains **18 aggregate CSV tables** and four canonical R analysis entry points. The original 14 aggregate tables and original model point estimates are unchanged.
+The 23 October 2026 submission sync verifies the four canonical R analysis entry points and **18 aggregate CSV tables** against the reviewed analysis outputs. All four entry points and all 18 CSVs remain byte-identical to the 21 October snapshot. The validation extension includes 100 additional shared ten-fold allocations and 1000 paired participant-level bootstrap resamples with model refitting; no new models were fitted for this sync. The current study-design PDF now matches the frozen submission figure.
 
-Cite the exact Git commit used. The version label `0.3.1-dev` is descriptive metadata, not a Git tag, formal Release or archival DOI.
+Cite the exact Git commit used. The version label `0.3.2-dev` is descriptive metadata, not a Git tag, formal Release or archival DOI. The [submission-sync provenance](provenance/submission_sync_20261023.json) records the reviewed code, aggregate-file hashes and current figure hash.
 
 - [Reproduction instructions](REPRODUCIBILITY.md)
 - [Aggregate data dictionary and checksums](public_data/README.md)
@@ -31,6 +31,8 @@ Complementary datasets characterize a candidate, platform-dependent proportional
 Participants are not linked or pooled across sources. Different roles and endpoints are complementary evidence, not interchangeable replications of one outcome. Record counts, people and person-waves must not be added into a pooled sample size.
 
 DXA MBR equals lean soft tissue excluding BMC divided by BMC. BIA muscle mass, fat-free mass and DXA lean soft tissue are not identical compartments. The paired NHANES comparison does not calibrate the BIA bone estimate, the complete BIA ratio or Chinese device algorithms. The Chinese value of 16 is an empirical distribution feature, not a diagnostic cutoff.
+
+The Chinese discovery count is 152449 reported records, including 27327 records aged at least 50 years (17.9% of the reported total). Historical percentage component differences describe older-adult subgroups, not the full discovery sample; exact subgroup denominators and the age-50 inclusion boundary could not be reconstructed. These historical summaries are not independently reproduced participant-level results.
 
 ## Main numerical interpretation
 

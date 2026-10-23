@@ -2,6 +2,8 @@
 
 All CSV files in this directory are aggregate, non-identifying outputs. `manifest.json` specifies exact headers, row counts and SHA-256 hashes.
 
+All 18 CSVs were checked for the 23 October 2026 submission sync and remain byte-identical to the previously reviewed outputs. The resampling files contain model-level performance metrics only, not participant predictions or resampling frequencies. See [sync provenance](../provenance/submission_sync_20261023.json).
+
 Source data remain with their providers. Follow the [HRS conditions](https://hrs.isr.umich.edu/data-products/access-to-public-data/conditions-of-use), [CHARLS agreement](https://charls.charlsdata.com/users/sign_up/agreement/en.html), and [SHARE conditions and citation requirements](https://www.share-eric.eu/data/data-access/conditions-of-use) when using or citing these analyses. Public access to these summary tables does not grant access to the underlying survey records or a software/data reuse license.
 
 | File | Unit and meaning |
@@ -25,7 +27,7 @@ Source data remain with their providers. Follow the [HRS conditions](https://hrs
 | validation_repeated_cv.csv | 8000 model-level metrics: ten outcomes, eight models and 100 additional shared ten-fold allocations; no participant data |
 | validation_refit_bootstrap.csv | 80000 model-level metrics: ten outcomes, eight models and 1000 paired participant resamples with model refitting; no participant data |
 
-The design table contains 38 aggregate counts. Chinese discovery records are reported, not independently rebuilt. The NHANES paired count is per imputation, never summed across the five imputations. Clinical-context eligible pools are not outcome-specific model samples. Counts are not pooled across datasets. Authorized source bundles are not redistributed. See [the design scope note](../assets/STUDY_DESIGN_REFERENCE.md).
+The design table contains 38 aggregate counts. Chinese discovery records are reported, not independently rebuilt. Historical component percentage differences concern older-adult subgroups rather than all discovery records; exact subgroup denominators and the age-50 boundary are unavailable. The overall count aged at least 50 is 27327/152449 (17.9%), not a replacement subgroup denominator. The NHANES paired count is per imputation, never summed across the five imputations. Clinical-context eligible pools are not outcome-specific model samples. Counts are not pooled across datasets. Authorized source bundles are not redistributed. See [the design scope note](../assets/STUDY_DESIGN_REFERENCE.md).
 
 For DXA/bridge analyses, `n`, `events` and flow counts are unweighted participant counts, never sums of imputation rows. In context analyses, `n` and `events` count respondent-wave observations; `participants` counts unique respondents. `weighted` is Boolean. Lean and BMC are in grams; ratios are dimensionless. `conf_low/conf_high` refer to the corresponding metric, not a common scale across rows. `variance_z` is Fisher-z variance. Threshold metrics lack independent validation and interval estimates. P values are exploratory and not adjusted for multiplicity. NA is missing/not applicable, not zero.
 

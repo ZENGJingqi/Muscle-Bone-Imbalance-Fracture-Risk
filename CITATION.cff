@@ -5,7 +5,7 @@ title: "Muscle-to-bone proportionality: revised analysis code and aggregate resu
 authors:
   - family-names: Zeng
     given-names: Jingqi
-version: 0.3.1-dev
+version: 0.3.2-dev
 repository-code: "https://github.com/ZENGJingqi/Muscle-Bone-Imbalance-Fracture-Risk"
 abstract: "Complementary population analyses of a candidate proportional phenotype, with harmonized DXA components, five-imputation pooling, survey sensitivity, component comparisons, repeated ten-fold allocations and paired refitting-bootstrap uncertainty. Not a validated clinical tool."
 keywords:

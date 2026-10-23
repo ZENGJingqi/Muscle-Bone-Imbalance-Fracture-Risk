@@ -1,0 +1,112 @@
+{
+  "reviewed_on": "2026-10-23",
+  "previous_public_commit": "92133749393c199440334a256fc1fd8b02184da0",
+  "identity": "The containing Git commit identifies this snapshot; no tag, Release or DOI is implied.",
+  "analysis_entry_points_unchanged": [
+    {
+      "file": "code/Publication/reanalyse.R",
+      "sha256": "c69fca4cdb1491b2428a56bd0e70400a40f99fefcef7b79d5a85b48ae51bfe8a"
+    },
+    {
+      "file": "code/Publication/reanalyse_context.R",
+      "sha256": "43df29b645a1ae43a716a1202a8b93c5196ea32023d1dc29d3add4b19410b0e3"
+    },
+    {
+      "file": "code/Publication/audit_study_design_counts.R",
+      "sha256": "4e2d4fed59079b415c642bcc09a51b41ed1560d3e3923447f2ac8863f4de198e"
+    },
+    {
+      "file": "code/Publication/extend_model_validation.R",
+      "sha256": "63212eea9fc145ea496f22deeca42ae72a2fd7438f716b534a25c04a105ce073"
+    }
+  ],
+  "all_18_reviewed_aggregate_csvs_unchanged": [
+    {
+      "file": "adjusted_associations.csv",
+      "sha256": "c989a3210567ea70177cf70e8d94af51bc4d9d1a704a170b0ec5e2ca3e76bbc4"
+    },
+    {
+      "file": "bridge_per_imputation.csv",
+      "sha256": "745ce4fddf5d62344b5fe1f9003453e8c0c198deaf790d60836dc9a3cc952a75"
+    },
+    {
+      "file": "bridge_pooled.csv",
+      "sha256": "55d711134cc2035e01c0922f702bc14fe64bcba36c8ba4b5df41ca3672e0aa36"
+    },
+    {
+      "file": "component_cv_performance.csv",
+      "sha256": "88f00f0310817621c0ce9f36664442b5ca3fb648cdb5187a4dd1c1901bcdba6d"
+    },
+    {
+      "file": "context_clustered_associations.csv",
+      "sha256": "708d2c10166d9ed32899ade91cec242b761097461f49d0adb391e3ad2c1aed7d"
+    },
+    {
+      "file": "context_weight_coverage.csv",
+      "sha256": "3c7b12c4722b650b594a1eacff5a7ea7961b011af1291996aa9a91c63e471db5"
+    },
+    {
+      "file": "KNHANES_description.csv",
+      "sha256": "a538949821f246dd2b14593d132cecf533107e1be3643f856c61be263564902d"
+    },
+    {
+      "file": "NHANES_description.csv",
+      "sha256": "e66d33113b1fcf522a3fa2a4c671ebed06ebe68b4471d114bc837fcf11c4f71f"
+    },
+    {
+      "file": "sample_flow.csv",
+      "sha256": "743c9fd34ed6412ce4b32b30ab9948713a04dd8885015d8b87d37fd0cd3f003b"
+    },
+    {
+      "file": "spline_curves.csv",
+      "sha256": "ffad09af32c893fa82c54a417a8ffe03141a9606e2c4085933ff58e13a30adc7"
+    },
+    {
+      "file": "spline_tests.csv",
+      "sha256": "7ec00f44145ff1c26a37a61f1626b354a0cf3d2ac9ad793845c50a2c160461f9"
+    },
+    {
+      "file": "study_design_sample_counts.csv",
+      "sha256": "37c63dc49383b3a921955ac3137a8ea04b3ca10e377ea0c438b8446547fdded9"
+    },
+    {
+      "file": "threshold_performance.csv",
+      "sha256": "1ee3015395dd3114ed428b70de93769f49138cda5c8a9a2962df64e5926f84c0"
+    },
+    {
+      "file": "validation_paired_differences.csv",
+      "sha256": "6df7003ddaeab016b45d8cbcc4e61ffc021b91a212714f024ce1296a9799ef6d"
+    },
+    {
+      "file": "validation_performance_summary.csv",
+      "sha256": "3f350b01339606f1e8ee3f985d7c89bbf4d097f7f1b8790b76ceb56e4430a231"
+    },
+    {
+      "file": "validation_refit_bootstrap.csv",
+      "sha256": "057f35d86967d3501b0cc896a0b0e9d6ae26f5aab8a8c7fbf086e611ad24fb1b"
+    },
+    {
+      "file": "validation_repeated_cv.csv",
+      "sha256": "029a90f5a777e6f36c41c0ff77ffbd222bdfe00aaaf3c5b8d01112ee09067b48"
+    },
+    {
+      "file": "weight_coverage_audit.csv",
+      "sha256": "a3c9fdc0d38d8eefb5c9d702e2351be973e2756778297272fd8c6d865992bf4d"
+    }
+  ],
+  "numeric_validation": {
+    "performance_summaries": 80,
+    "paired_differences": 70,
+    "repeat_metric_rows": 8000,
+    "bootstrap_metric_rows": 80000
+  },
+  "current_study_design_pdf_sha256": "0527e82bab80c4961433fd22da65217e943fed09592556cc30d2f192a02dae46",
+  "discovery_scope": "Historical component percentage differences concern older-adult subgroups, not the full discovery sample. Exact subgroup denominators and the age-50 boundary were not reconstructed.",
+  "excluded": [
+    "participant records and identifiers",
+    "individual predictions and fold assignments",
+    "resampling frequencies and checkpoints",
+    "manuscripts and submission correspondence"
+  ],
+  "fresh_statistical_refitting_performed_for_this_sync": false
+}
